@@ -1,43 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nilkamal Bar | Documentary Filmmaker, Visual Journalist & Researcher</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Personal portfolio of Nilkamal Bar — Documentary Filmmaker, Investigative Visual Journalist, and Independent Researcher exploring climate displacement, border geographies, and human dignity.">
-  <meta name="keywords" content="Nilkamal Bar, Documentary Filmmaker, Visual Journalist, Investigative Journalism, Field Researcher, South Asia, Climate Dispatches">
-  <meta name="author" content="Nilkamal Bar">
-  
-  <!-- Open Graph / Social Media Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nilkamal Bar | Documentary Filmmaker & Visual Journalist">
-  <meta property="og:description" content="Award-winning visual storytelling, investigative dispatches, and long-form research into human resilience and social justice.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80">
-  
-  <!-- JSON-LD Structured Data for Search Engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nilkamal Bar",
-    "jobTitle": "Documentary Filmmaker & Visual Journalist",
-    "url": "https://nilkamalbar.com",
-    "sameAs": [
-      "https://vimeo.com",
-      "https://youtube.com",
-      "https://linkedin.com",
-      "https://x.com"
-    ],
-    "description": "Documentary filmmaker and visual journalist focusing on climate vulnerabilities, socio-political peripheries, and indigenous narratives."
-  }
-  </script>
+  <title>Nilkamal Bar | Documentary Creator & Video Factual Registry</title>
+  <meta name="description" content="Official portfolio and factual correction registry of Nilkamal Bar — College student & independent Bengali documentary filmmaker on YouTube.">
 
-  <!-- Google Fonts: Cormorant Garamond (Editorial serif) + Plus Jakarta Sans (Clean body) -->
+  <!-- Inter & JetBrains Mono Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,20 +20,22 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            editorial: {
-              charcoal: '#111215',
-              dark: '#16181d',
-              surface: '#20232a',
-              accent: '#d97736', // Warm amber / 35mm film accent
-              gold: '#c5a059',
-              lightBg: '#fbfaf8',
+            brand: {
+              charcoal: '#0e1015',
+              surface: '#151821',
+              card: '#1b202c',
+              border: '#282f3f',
+              accent: '#d97736', // Warm amber film tone
+              accentHover: '#c26527',
+              redBadge: '#ef4444',
+              greenBadge: '#10b981',
+              lightBg: '#f8fafc',
               lightSurface: '#ffffff',
-              borderLight: '#e7e5e0',
-              borderDark: '#2c313a'
+              lightBorder: '#e2e8f0'
             }
           }
         }
@@ -69,189 +44,183 @@
   </script>
 
   <style>
-    /* Custom refined scrollbar & editorial accents */
+    /* Sleek scrollbar styling */
     ::-webkit-scrollbar {
-      width: 7px;
+      width: 6px;
+      height: 6px;
     }
     ::-webkit-scrollbar-track {
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
-      background: #8884;
+      background: #47556944;
       border-radius: 999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #8888;
+      background: #47556988;
     }
-    .text-balance {
-      text-wrap: balance;
-    }
-    .paper-grain {
-      background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0);
-      background-size: 24px 24px;
-    }
-    .dark .paper-grain {
-      background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0);
-      background-size: 24px 24px;
+    .badge-mono {
+      font-feature-settings: "tnum";
+      font-variant-numeric: tabular-nums;
     }
   </style>
 </head>
 
-<body class="bg-editorial-lightBg text-neutral-800 dark:bg-editorial-charcoal dark:text-neutral-200 font-sans transition-colors duration-300 selection:bg-editorial-accent selection:text-white paper-grain min-h-screen flex flex-col">
+<body class="bg-brand-charcoal text-slate-200 font-sans selection:bg-brand-accent selection:text-white min-h-screen flex flex-col antialiased">
 
-  <!-- ==================== HEADER & NAVIGATION ==================== -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-editorial-lightBg/90 dark:bg-editorial-charcoal/90 border-b border-editorial-borderLight dark:border-editorial-borderDark transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-50 bg-brand-charcoal/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo -->
-      <a href="#hero" class="flex flex-col group">
-        <span class="font-serif text-2xl font-bold tracking-widest text-neutral-900 dark:text-neutral-50 group-hover:text-editorial-accent transition-colors">
-          NILKAMAL BAR
-        </span>
-        <span class="text-[10px] tracking-widest uppercase text-neutral-500 dark:text-neutral-400 font-medium">
-          Filmmaker • Visual Journalist
-        </span>
+      <!-- Brand & Identity -->
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-full overflow-hidden border border-brand-accent/40 group-hover:border-brand-accent transition-colors">
+          <img src="1000128485.png" alt="Nilkamal Bar" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="text-base font-bold text-white tracking-wide block group-hover:text-brand-accent transition-colors">
+            NILKAMAL BAR
+          </span>
+          <span class="text-[11px] font-mono text-slate-400 block tracking-wider uppercase">
+            Bengali Documentaries • Errata Log
+          </span>
+        </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
-        <a href="#about" class="nav-link hover:text-editorial-accent transition-colors py-1">About</a>
-        <a href="#documentaries" class="nav-link hover:text-editorial-accent transition-colors py-1">Films & Portfolio</a>
-        <a href="#research" class="nav-link hover:text-editorial-accent transition-colors py-1">Investigations & Notes</a>
-        <a href="#testimonials" class="nav-link hover:text-editorial-accent transition-colors py-1">Recognition</a>
-        <a href="#contact" class="nav-link hover:text-editorial-accent transition-colors py-1">Contact</a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-300">
+        <a href="#errata" class="hover:text-brand-accent transition-colors flex items-center space-x-1.5">
+          <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+          <span>Timeline Registry</span>
+        </a>
+        <a href="#documentaries" class="hover:text-brand-accent transition-colors">Documentaries</a>
+        <a href="#report" class="hover:text-brand-accent transition-colors">Submit Mistake</a>
       </nav>
 
-      <!-- Action items: Dark mode toggle & CTA -->
-      <div class="flex items-center space-x-4">
-        <!-- Theme Switcher Button -->
-        <button id="theme-toggle" aria-label="Toggle Color Theme" class="p-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-300 transition-all focus:outline-none focus:ring-2 focus:ring-editorial-accent">
-          <!-- Moon Icon (Light Mode visible) -->
-          <svg id="theme-icon-moon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      <!-- Social Hyperlinks (Header) -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <!-- YouTube -->
+        <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" 
+           title="YouTube @thenilkamal"
+           class="p-2 rounded-lg bg-brand-surface border border-brand-border hover:border-red-500 hover:text-red-500 transition-all text-slate-400">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
-          <!-- Sun Icon (Dark Mode visible) -->
-          <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
-        </button>
-
-        <!-- Direct CTA Button -->
-        <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 border border-editorial-accent text-editorial-accent dark:text-editorial-accent hover:bg-editorial-accent hover:text-white rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300">
-          Get in Touch
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-btn" aria-label="Open mobile navigation menu" class="md:hidden p-2 rounded-lg text-neutral-700 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-800">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        <!-- Twitter / X -->
+        <a href="https://x.com/the_nilkamal" target="_blank" rel="noopener noreferrer" 
+           title="X (Twitter) @the_nilkamal"
+           class="p-2 rounded-lg bg-brand-surface border border-brand-border hover:border-sky-400 hover:text-sky-400 transition-all text-slate-400">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
-        </button>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/thenilkamal" target="_blank" rel="noopener noreferrer" 
+           title="Instagram @thenilkamal"
+           class="p-2 rounded-lg bg-brand-surface border border-brand-border hover:border-pink-500 hover:text-pink-500 transition-all text-slate-400">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Toggle navigation" class="md:hidden p-2 text-slate-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-editorial-borderLight dark:border-editorial-borderDark bg-editorial-lightBg dark:bg-editorial-dark px-6 py-6 transition-all duration-300">
-      <nav class="flex flex-col space-y-4 text-base font-medium">
-        <a href="#about" class="mobile-link py-2 text-neutral-800 dark:text-neutral-200 hover:text-editorial-accent">About</a>
-        <a href="#documentaries" class="mobile-link py-2 text-neutral-800 dark:text-neutral-200 hover:text-editorial-accent">Documentaries</a>
-        <a href="#research" class="mobile-link py-2 text-neutral-800 dark:text-neutral-200 hover:text-editorial-accent">Articles & Research</a>
-        <a href="#testimonials" class="mobile-link py-2 text-neutral-800 dark:text-neutral-200 hover:text-editorial-accent">Recognition</a>
-        <a href="#contact" class="mobile-link py-2 text-neutral-800 dark:text-neutral-200 hover:text-editorial-accent">Contact</a>
-        <a href="#contact" class="w-full text-center py-2.5 mt-2 bg-editorial-accent text-white font-semibold rounded-full text-sm">
-          Commission or Inquire
-        </a>
-      </nav>
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-surface border-b border-brand-border px-6 py-4 space-y-3 text-sm">
+      <a href="#errata" class="block text-slate-300 hover:text-brand-accent py-1">Timeline Registry (Errata)</a>
+      <a href="#documentaries" class="block text-slate-300 hover:text-brand-accent py-1">Documentaries</a>
+      <a href="#report" class="block text-slate-300 hover:text-brand-accent py-1">Submit Mistake</a>
+      <div class="pt-3 border-t border-brand-border flex items-center space-x-4">
+        <a href="https://youtube.com/@thenilkamal" target="_blank" class="text-xs text-slate-400 hover:text-red-400">YouTube</a>
+        <a href="https://x.com/the_nilkamal" target="_blank" class="text-xs text-slate-400 hover:text-sky-400">Twitter (X)</a>
+        <a href="https://instagram.com/thenilkamal" target="_blank" class="text-xs text-slate-400 hover:text-pink-400">Instagram</a>
+      </div>
     </div>
   </header>
 
   <main class="flex-grow">
     
-    <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 border-b border-editorial-borderLight dark:border-editorial-borderDark overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <!-- ==================== HERO / BIO SECTION ==================== -->
+    <section id="hero" class="py-14 sm:py-20 border-b border-brand-border relative overflow-hidden">
+      <!-- Minimalist glow background -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-14">
           
-          <!-- Left Column: Editorial Statement -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-editorial-accent/10 text-editorial-accent text-xs font-semibold tracking-wider uppercase">
-              <span class="w-2 h-2 rounded-full bg-editorial-accent animate-ping"></span>
-              <span>Available for International Assignments & Grants</span>
+          <!-- Bio Text -->
+          <div class="flex-1 text-center md:text-left space-y-5">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-xs font-mono font-medium tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+              <span>College Student &amp; Independent Creator</span>
             </div>
-            
-            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] font-bold text-neutral-900 dark:text-neutral-50 tracking-tight text-balance">
-              Bearing witness to the quiet storms on human margins.
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              Bengali Documentaries with Uncompromising Factual Accountability.
             </h1>
-            
-            <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed font-light max-w-2xl">
-              I am <span class="font-semibold text-neutral-900 dark:text-neutral-100">Nilkamal Bar</span>, an independent documentary filmmaker, investigative visual journalist, and researcher examining ecological displacement, borderlands, and resilience across South Asia and beyond.
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+              I am <span class="text-white font-semibold">Nilkamal Bar</span>. I research and produce in-depth documentary videos in <span class="text-brand-accent font-semibold">Bengali</span> for my YouTube channel (<a href="https://youtube.com/@thenilkamal" target="_blank" class="underline underline-offset-4 hover:text-white">@thenilkamal</a>).
             </p>
 
-            <div class="flex flex-wrap items-center gap-4 pt-4">
-              <a href="#documentaries" class="px-7 py-3.5 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 font-medium rounded-full text-sm hover:bg-editorial-accent dark:hover:bg-editorial-accent dark:hover:text-white transition-all shadow-sm">
-                Explore Films & Projects
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+              Researching extensive historical and sociopolitical topics means unintentional slips or outdated facts can occasionally occur. I believe truth and transparency come before pride. This website serves as an open, timestamped registry documenting all inadvertent errors, context clarifications, and verified citations for every video released.
+            </p>
+
+            <!-- Quick Action Links -->
+            <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <a href="#errata" class="px-6 py-3 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-semibold text-sm transition-all shadow-lg shadow-brand-accent/20 flex items-center space-x-2">
+                <span>View Timeline Corrections</span>
+                <span>&darr;</span>
               </a>
-              <a href="#research" class="px-7 py-3.5 border border-neutral-300 dark:border-neutral-700 font-medium rounded-full text-sm hover:border-editorial-accent hover:text-editorial-accent transition-all">
-                Read Investigations
+              <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border text-slate-200 font-medium text-sm transition-all flex items-center space-x-2">
+                <svg class="w-4 h-4 fill-red-500" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>Watch on YouTube</span>
               </a>
             </div>
 
-            <!-- Quantitative Impact Metrics -->
-            <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-editorial-borderLight dark:border-editorial-borderDark">
+            <!-- Stats/Credibility summary -->
+            <div class="pt-4 grid grid-cols-3 gap-3 border-t border-brand-border text-center md:text-left">
               <div>
-                <p class="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">12+</p>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Short & Feature Docs</p>
+                <span class="text-xl font-bold font-mono text-white">100%</span>
+                <p class="text-xs text-slate-400">Open Correction Policy</p>
               </div>
               <div>
-                <p class="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">35+</p>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Field Dispatches</p>
+                <span class="text-xl font-bold font-mono text-white">Bengali</span>
+                <p class="text-xs text-slate-400">Primary Language</p>
               </div>
               <div>
-                <p class="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">08</p>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Festival Selections</p>
-              </div>
-              <div>
-                <p class="font-serif text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">05</p>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Research Fellowships</p>
+                <span class="text-xl font-bold font-mono text-white">Student</span>
+                <p class="text-xs text-slate-400">Independent Researcher</p>
               </div>
             </div>
+
           </div>
 
-          <!-- Right Column: Visual Portrait Presentation -->
-          <div class="lg:col-span-5 relative flex justify-center">
-            <div class="relative w-full max-w-md">
-              <!-- Decorative Offset Frame -->
-              <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-editorial-accent/30 to-editorial-gold/20 -rotate-2 filter blur-sm"></div>
+          <!-- User Provided Picture Frame -->
+          <div class="flex-shrink-0 relative">
+            <div class="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden bg-brand-surface border-2 border-brand-border shadow-2xl relative group">
+              <!-- Provided photo -->
+              <img 
+                src="1000128485.png" 
+                alt="Nilkamal Bar" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent"></div>
               
-              <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-neutral-900 border border-neutral-200 dark:border-neutral-700">
-                <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" 
-                  alt="Nilkamal Bar - Portrait in Field" 
-                  class="w-full h-[460px] object-cover object-top filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
-                  loading="lazy"
-                  onerror="this.src='https://placehold.co/600x800/222/ddd?text=Nilkamal+Bar'"
-                />
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                  <div class="flex items-center space-x-2 text-xs font-mono text-editorial-gold">
-                    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-                    <span>FIELD DISPATCH // SUNDARBANS BASIN</span>
-                  </div>
-                  <p class="text-sm font-light text-neutral-200 mt-1 italic">
-                    "The lens must never exploit what pain has already exposed."
-                  </p>
-                </div>
-              </div>
-              
-              <!-- Floating Stamp Tag -->
-              <div class="absolute -bottom-4 -left-4 bg-white dark:bg-editorial-surface border border-neutral-200 dark:border-neutral-700 p-3 rounded-xl shadow-lg flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-full bg-editorial-accent/20 flex items-center justify-center text-editorial-accent font-serif font-bold text-sm">
-                  NB
-                </div>
-                <div>
-                  <div class="text-xs font-bold leading-none">Investigative Fellow</div>
-                  <div class="text-[10px] text-neutral-500">South Asia Visual Archive</div>
-                </div>
+              <div class="absolute bottom-3 left-3 right-3 text-center md:text-left">
+                <span class="text-[11px] font-mono font-medium text-brand-accent bg-brand-charcoal/90 px-2.5 py-1 rounded-md border border-brand-border inline-block">
+                  Nilkamal Bar • @thenilkamal
+                </span>
               </div>
             </div>
           </div>
@@ -260,948 +229,107 @@
       </div>
     </section>
 
-    <!-- ==================== ABOUT SECTION ==================== -->
-    <section id="about" class="py-20 border-b border-editorial-borderLight dark:border-editorial-borderDark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- ==================== CORE SECTION: TIMELINE ERRATA & MISTAKES REGISTRY ==================== -->
+    <section id="errata" class="py-16 sm:py-20 bg-brand-surface/40 border-b border-brand-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="max-w-3xl mb-14">
-          <span class="text-xs font-bold tracking-widest text-editorial-accent uppercase">Editorial Philosophy</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-neutral-900 dark:text-neutral-50">
-            A dedication to ethical slowness, contextual rigor, and deep presence.
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          <!-- Narrative Left Column -->
-          <div class="lg:col-span-7 space-y-6 text-neutral-600 dark:text-neutral-300 leading-relaxed text-base sm:text-lg font-light">
-            <p>
-              I work at the intersections of cinema, journalism, and ethnographic research. Over the past decade, my cameras have tracked the shifting estuaries of the delta, contested forest rights in central tribal belts, and the uncataloged grief of climate migration.
-            </p>
-            <p>
-              Rather than transient headlines, my work prioritizes sustained presence. I believe documentary filmmaking is not merely recording reality, but creating a sanctuary where marginalized subjects co-author their own visual legacy.
-            </p>
-            
-            <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="p-5 rounded-xl border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/40">
-                <h4 class="font-serif font-bold text-lg text-neutral-900 dark:text-neutral-100 mb-1">Human-Centric Lens</h4>
-                <p class="text-xs text-neutral-500 leading-normal">
-                  Informed consent, dignity preservation, and dismantling parachute-journalism habits.
-                </p>
-              </div>
-              <div class="p-5 rounded-xl border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/40">
-                <h4 class="font-serif font-bold text-lg text-neutral-900 dark:text-neutral-100 mb-1">Empirical Rigor</h4>
-                <p class="text-xs text-neutral-500 leading-normal">
-                  Marrying visual empathy with verified archival investigation and spatial geospatial data.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Milestones & Background Right Column -->
-          <div class="lg:col-span-5 bg-neutral-100/60 dark:bg-editorial-surface/30 p-8 rounded-2xl border border-editorial-borderLight dark:border-editorial-borderDark flex flex-col justify-between">
-            <h3 class="font-serif text-2xl font-bold text-neutral-900 dark:text-white mb-6">
-              Core Focus Disciplines
-            </h3>
-            
-            <ul class="space-y-4">
-              <li class="flex items-start space-x-3">
-                <span class="text-editorial-accent font-mono text-sm mt-0.5">01</span>
-                <div>
-                  <h4 class="text-sm font-semibold text-neutral-800 dark:text-neutral-200">Climate Displacement & Coastal Disappearance</h4>
-                  <p class="text-xs text-neutral-500 mt-0.5">Focusing on island erosions, salinity crises, and socio-economic displacement in deltaic systems.</p>
-                </div>
-              </li>
-              <li class="flex items-start space-x-3">
-                <span class="text-editorial-accent font-mono text-sm mt-0.5">02</span>
-                <div>
-                  <h4 class="text-sm font-semibold text-neutral-800 dark:text-neutral-200">Border Geographies & Statelessness</h4>
-                  <p class="text-xs text-neutral-500 mt-0.5">Longitudinal inquiries into physical fencing, enclave citizens, and identity politics.</p>
-                </div>
-              </li>
-              <li class="flex items-start space-x-3">
-                <span class="text-editorial-accent font-mono text-sm mt-0.5">03</span>
-                <div>
-                  <h4 class="text-sm font-semibold text-neutral-800 dark:text-neutral-200">Indigenous Forest Rights & Ecologies</h4>
-                  <p class="text-xs text-neutral-500 mt-0.5">Visual documentation of customary land governance, mining encroachments, and folk oral histories.</p>
-                </div>
-              </li>
-            </ul>
-
-            <div class="mt-8 pt-6 border-t border-neutral-300 dark:border-neutral-700/60 flex items-center justify-between">
-              <span class="text-xs text-neutral-500">Based in Kolkata & Available Globally</span>
-              <a href="#contact" class="text-xs font-bold text-editorial-accent hover:underline flex items-center space-x-1">
-                <span>View Full CV & Inquiries</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== DOCUMENTARIES & VIDEO PORTFOLIO ==================== -->
-    <section id="documentaries" class="py-20 border-b border-editorial-borderLight dark:border-editorial-borderDark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <!-- Header & Explanation -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span class="text-xs font-bold tracking-widest text-editorial-accent uppercase">Selected Cinema & Dispatches</span>
-            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-neutral-900 dark:text-neutral-50">
-              Documentary Works
+            <div class="inline-flex items-center space-x-2 text-xs font-mono uppercase text-brand-accent tracking-wider font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+              <span>Integrity &amp; Public Transparency</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">
+              Video Corrections &amp; Timeline Registry
             </h2>
+            <p class="text-slate-400 text-sm mt-1 max-w-2xl">
+              An auditable public record of unintentional slips, dates, pronunciations, and updated data across my YouTube documentaries, mapped by exact video timelines.
+            </p>
           </div>
-          
-          <!-- Category Filter Tabs -->
-          <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="portfolio-filter-buttons">
-            <button data-filter="all" class="filter-btn active px-4 py-2 text-xs font-semibold rounded-full border border-editorial-accent bg-editorial-accent text-white transition-all">
-              All Works
-            </button>
-            <button data-filter="feature" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:border-editorial-accent transition-all">
-              Feature Films
-            </button>
-            <button data-filter="dispatch" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:border-editorial-accent transition-all">
-              Field Dispatches
-            </button>
-            <button data-filter="short" class="filter-btn px-4 py-2 text-xs font-semibold rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:border-editorial-accent transition-all">
-              Visual Shorts
-            </button>
+
+          <!-- Fast Filter / Search -->
+          <div class="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
+            <div class="relative">
+              <input 
+                type="text" 
+                id="registrySearch" 
+                placeholder="Search error, topic, video..."
+                class="w-full sm:w-64 px-3.5 py-2 pl-9 bg-brand-charcoal border border-brand-border rounded-xl text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-accent"
+              />
+              <svg class="w-4 h-4 text-slate-500 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+
+            <select 
+              id="registryFilter" 
+              class="px-3 py-2 bg-brand-charcoal border border-brand-border rounded-xl text-xs text-slate-300 focus:outline-none focus:border-brand-accent"
+            >
+              <option value="all">All Documentaries</option>
+              <option value="Partition & Borderlands">Partition &amp; Borderlands</option>
+              <option value="The Sinking Sundarbans">The Sinking Sundarbans</option>
+              <option value="Bengal Renaissance Unknown Figures">Bengal Renaissance</option>
+              <option value="Great Bengal Famine Archives">Great Bengal Famine</option>
+            </select>
           </div>
         </div>
 
-        <!-- Video Portfolio Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+        <!-- Registry List / Table Container -->
+        <div class="space-y-4" id="errataContainer">
           
-          <!-- Item 1 -->
-          <div class="portfolio-item group" data-category="feature">
-            <div class="rounded-2xl overflow-hidden border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/40 flex flex-col h-full hover:shadow-xl transition-all duration-300">
-              <div class="relative overflow-hidden aspect-video bg-neutral-900">
-                <img 
-                  src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" 
-                  alt="Tides of Relic" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                  loading="lazy"
-                  onerror="this.src='https://placehold.co/800x450/222/ddd?text=Tides+of+Relic'"
-                />
-                <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-sm text-white text-[11px] font-mono px-2.5 py-1 rounded">
-                  48 mins • 2024
-                </span>
-                <span class="absolute top-3 right-3 bg-editorial-accent text-white text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded">
-                  Feature Doc
-                </span>
-                <button 
-                  onclick="openVideoModal('Tides of Relic: When the Silt Vanishes', 'A two-year investigation documenting the submersion of ancestral lands in the outer delta, where generational fishermen negotiate tides that no longer recede.', '48 mins', 'Rotterdam Film Festival Official Selection', 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80')"
-                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"
-                  aria-label="View trailer details for Tides of Relic"
-                >
-                  <div class="w-14 h-14 rounded-full bg-white/90 text-neutral-900 flex items-center justify-center pl-1 shadow-lg transform group-hover:scale-110 transition-transform">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </button>
-              </div>
-
-              <div class="p-6 flex flex-col flex-grow">
-                <div class="text-[11px] uppercase font-mono text-editorial-gold mb-1">Rotterdam Selection • Special Jury Mention</div>
-                <h3 class="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-                  Tides of Relic: When Silt Vanishes
-                </h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 mb-4 font-light">
-                  An intimate chronicle of vanishing island communities across the Bay of Bengal and their quiet persistence against saltwater inundation.
-                </p>
-                <div class="mt-auto pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
-                  <span class="text-xs text-neutral-500">Directing, Cinematography</span>
-                  <button 
-                    onclick="openVideoModal('Tides of Relic: When the Silt Vanishes', 'A two-year investigation documenting the submersion of ancestral lands in the outer delta, where generational fishermen negotiate tides that no longer recede.', '48 mins', 'Rotterdam Film Festival Official Selection', 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80')"
-                    class="text-xs font-bold text-editorial-accent hover:underline"
-                  >
-                    Watch Trailer & Case Study &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="portfolio-item group" data-category="dispatch">
-            <div class="rounded-2xl overflow-hidden border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/40 flex flex-col h-full hover:shadow-xl transition-all duration-300">
-              <div class="relative overflow-hidden aspect-video bg-neutral-900">
-                <img 
-                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" 
-                  alt="Between Two Wire Fences" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                  loading="lazy"
-                  onerror="this.src='https://placehold.co/800x450/222/ddd?text=Between+Two+Wire+Fences'"
-                />
-                <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-sm text-white text-[11px] font-mono px-2.5 py-1 rounded">
-                  22 mins • 2023
-                </span>
-                <span class="absolute top-3 right-3 bg-editorial-accent text-white text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded">
-                  Field Dispatch
-                </span>
-                <button 
-                  onclick="openVideoModal('Between Two Wire Fences', 'Filmed across 9 months in border enclaves, tracing individuals who cultivate farmland inside zero-line enclaves cut off by barbed wire curfew hours.', '22 mins', 'Human Rights Screen Award 2023', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80')"
-                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"
-                  aria-label="View trailer details for Between Two Wire Fences"
-                >
-                  <div class="w-14 h-14 rounded-full bg-white/90 text-neutral-900 flex items-center justify-center pl-1 shadow-lg transform group-hover:scale-110 transition-transform">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </button>
-              </div>
-
-              <div class="p-6 flex flex-col flex-grow">
-                <div class="text-[11px] uppercase font-mono text-editorial-gold mb-1">Human Rights Screen Award</div>
-                <h3 class="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-                  Between Two Wire Fences
-                </h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 mb-4 font-light">
-                  A visual essay investigating agrarian livelihoods locked between geopolitical borders, military curfew checkposts, and zero-point existence.
-                </p>
-                <div class="mt-auto pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
-                  <span class="text-xs text-neutral-500">Field Reporter & Producer</span>
-                  <button 
-                    onclick="openVideoModal('Between Two Wire Fences', 'Filmed across 9 months in border enclaves, tracing individuals who cultivate farmland inside zero-line enclaves cut off by barbed wire curfew hours.', '22 mins', 'Human Rights Screen Award 2023', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80')"
-                    class="text-xs font-bold text-editorial-accent hover:underline"
-                  >
-                    Watch Trailer & Case Study &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="portfolio-item group" data-category="short">
-            <div class="rounded-2xl overflow-hidden border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/40 flex flex-col h-full hover:shadow-xl transition-all duration-300">
-              <div class="relative overflow-hidden aspect-video bg-neutral-900">
-                <img 
-                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" 
-                  alt="Echoes in the Sal Grove" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-                  loading="lazy"
-                  onerror="this.src='https://placehold.co/800x450/222/ddd?text=Echoes+in+the+Sal+Grove'"
-                />
-                <span class="absolute top-3 left-3 bg-black/75 backdrop-blur-sm text-white text-[11px] font-mono px-2.5 py-1 rounded">
-                  14 mins • 2023
-                </span>
-                <span class="absolute top-3 right-3 bg-editorial-accent text-white text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded">
-                  Visual Short
-                </span>
-                <button 
-                  onclick="openVideoModal('Echoes in the Sal Grove', 'An ethnographic audio-visual record documenting indigenous women leading autonomous conservation patrols against illegal timber extractions in eastern India.', '14 mins', 'Earth Vision Environmental Film Grant', 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80')"
-                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"
-                  aria-label="View trailer details for Echoes in the Sal Grove"
-                >
-                  <div class="w-14 h-14 rounded-full bg-white/90 text-neutral-900 flex items-center justify-center pl-1 shadow-lg transform group-hover:scale-110 transition-transform">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                  </div>
-                </button>
-              </div>
-
-              <div class="p-6 flex flex-col flex-grow">
-                <div class="text-[11px] uppercase font-mono text-editorial-gold mb-1">Earth Vision Grantee</div>
-                <h3 class="font-serif text-2xl font-bold text-neutral-900 dark:text-neutral-50 mb-2">
-                  Echoes in the Sal Grove
-                </h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 mb-4 font-light">
-                  Capturing indigenous Adivasi oral testimonies and community stewardship inside sacred forest groves threatened by open-cast coal mining.
-                </p>
-                <div class="mt-auto pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
-                  <span class="text-xs text-neutral-500">Director, Sound Recordist</span>
-                  <button 
-                    onclick="openVideoModal('Echoes in the Sal Grove', 'An ethnographic audio-visual record documenting indigenous women leading autonomous conservation patrols against illegal timber extractions in eastern India.', '14 mins', 'Earth Vision Environmental Film Grant', 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80')"
-                    class="text-xs font-bold text-editorial-accent hover:underline"
-                  >
-                    Watch Trailer & Case Study &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== ARTICLES & RESEARCH ==================== -->
-    <section id="research" class="py-20 border-b border-editorial-borderLight dark:border-editorial-borderDark">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl mb-14">
-          <span class="text-xs font-bold tracking-widest text-editorial-accent uppercase">Long-Form Journalism & Monographs</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-neutral-900 dark:text-neutral-50">
-            Selected Writing & Investigations
-          </h2>
-          <p class="mt-3 text-neutral-600 dark:text-neutral-400 font-light">
-            Complementing moving images with meticulous field notes, verified public records, and long-term socio-economic documentation.
-          </p>
-        </div>
-
-        <div class="space-y-6">
-          
-          <!-- Article Item 1 -->
-          <article class="p-6 md:p-8 rounded-2xl border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/30 hover:border-editorial-accent dark:hover:border-editorial-accent transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 text-xs font-mono text-neutral-500 mb-3">
-              <div class="flex items-center space-x-3">
-                <span class="px-2.5 py-0.5 rounded bg-editorial-accent/10 text-editorial-accent font-semibold uppercase">Environmental Injustice</span>
-                <span>Published in The Wire // Caravan Dispatch</span>
-              </div>
-              <time datetime="2024-03-12">March 2024 • 14 min read</time>
-            </div>
+          <!-- Registry Card Item 1 -->
+          <div class="errata-card p-5 sm:p-6 bg-brand-surface rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-200" 
+               data-video="The Sinking Sundarbans" 
+               data-text="gasping delta erosion salinity rate gosaba hectare 2024">
             
-            <h3 class="font-serif text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-50 hover:text-editorial-accent transition-colors">
-              <a href="javascript:void(0)" onclick="openArticleModal('The Disappearing Wells: Agrarian Debt & Salinization in Bengal’s Periphery', 'An investigative deep-dive analyzing drinking water privatization and subterranean aquifer depletion across 12 coastal villages.')">
-                The Disappearing Wells: Agrarian Debt & Salinization in Bengal’s Periphery
-              </a>
-            </h3>
-
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300 leading-relaxed font-light text-base">
-              Over sixteen months, our team tested groundwater across sixty-four tube wells in the delta belt. What emerged was not merely an environmental fallout, but an illicit informal credit racket binding debt-ridden farmers to private potable-water tankers.
-            </p>
-
-            <div class="mt-5 flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs">
-              <span class="text-neutral-500 italic">Field Work: South 24 Parganas, Gosaba & Patharpratima</span>
-              <button 
-                onclick="openArticleModal('The Disappearing Wells: Agrarian Debt & Salinization in Bengal’s Periphery', 'Over sixteen months, our team tested groundwater across sixty-four tube wells in the delta belt. What emerged was not merely an environmental fallout, but an illicit informal credit racket binding debt-ridden farmers to private potable-water tankers. Through public records and local testimonies, this investigation maps out the quiet collapse of agrarian stability under climate pressures.')"
-                class="font-semibold text-editorial-accent hover:underline flex items-center space-x-1"
-              >
-                <span>Read Full Investigation Synopsis</span>
-                <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Article Item 2 -->
-          <article class="p-6 md:p-8 rounded-2xl border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/30 hover:border-editorial-accent dark:hover:border-editorial-accent transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 text-xs font-mono text-neutral-500 mb-3">
-              <div class="flex items-center space-x-3">
-                <span class="px-2.5 py-0.5 rounded bg-editorial-gold/10 text-editorial-gold font-semibold uppercase">Legal Anthropology</span>
-                <span>Independent Research Fellowship Monograph</span>
-              </div>
-              <time datetime="2023-10-18">October 2023 • 22 min read</time>
-            </div>
-            
-            <h3 class="font-serif text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-50 hover:text-editorial-accent transition-colors">
-              <a href="javascript:void(0)" onclick="openArticleModal('Cartography of Exclusion: Living Inside the Neutral Enclaves', 'Archival research on bureaucratic limbo, contested land deeds, and the lived realities of statelessness in post-partition border zones.')">
-                Cartography of Exclusion: Living Inside the Neutral Enclaves
-              </a>
-            </h3>
-
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300 leading-relaxed font-light text-base">
-              A comprehensive inquiry examining how historic cadastral maps of 1947 continue to govern the everyday mobility, civil entitlements, and healthcare access of tens of thousands living along territorial borderlands.
-            </p>
-
-            <div class="mt-5 flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs">
-              <span class="text-neutral-500 italic">Supported by South Asia Research Collective</span>
-              <button 
-                onclick="openArticleModal('Cartography of Exclusion: Living Inside the Neutral Enclaves', 'A comprehensive inquiry examining how historic cadastral maps of 1947 continue to govern the everyday mobility, civil entitlements, and healthcare access of tens of thousands living along territorial borderlands. Built from archival records, oral histories, and cross-border field interviews.')"
-                class="font-semibold text-editorial-accent hover:underline flex items-center space-x-1"
-              >
-                <span>Read Full Investigation Synopsis</span>
-                <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Article Item 3 -->
-          <article class="p-6 md:p-8 rounded-2xl border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/30 hover:border-editorial-accent dark:hover:border-editorial-accent transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 text-xs font-mono text-neutral-500 mb-3">
-              <div class="flex items-center space-x-3">
-                <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Visual Ethics</span>
-                <span>Screen & Society Journal</span>
-              </div>
-              <time datetime="2023-05-04">May 2023 • 9 min read</time>
-            </div>
-            
-            <h3 class="font-serif text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-50 hover:text-editorial-accent transition-colors">
-              <a href="javascript:void(0)" onclick="openArticleModal('Against Disaster Voyeurism: Ethics of the Wide-Angle Lens in Crisis Zones', 'A practitioner essay on why visual journalists must interrogate their own distance when photographing human suffering.')">
-                Against Disaster Voyeurism: Ethics of the Wide-Angle Lens in Crisis Zones
-              </a>
-            </h3>
-
-            <p class="mt-3 text-neutral-600 dark:text-neutral-300 leading-relaxed font-light text-base">
-              When disaster strikes, the global camera lens frequently turns victims into passive silhouettes of tragedy. This essay explores collaborative visual grammar and returning the editorial veto to community participants.
-            </p>
-
-            <div class="mt-5 flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs">
-              <span class="text-neutral-500 italic">Peer-Reviewed Editorial Feature</span>
-              <button 
-                onclick="openArticleModal('Against Disaster Voyeurism: Ethics of the Wide-Angle Lens in Crisis Zones', 'When disaster strikes, the global camera lens frequently turns victims into passive silhouettes of tragedy. This essay explores collaborative visual grammar and returning the editorial veto to community participants, urging filmmakers to look beyond the spectacle of devastation.')"
-                class="font-semibold text-editorial-accent hover:underline flex items-center space-x-1"
-              >
-                <span>Read Full Investigation Synopsis</span>
-                <span>&rarr;</span>
-              </button>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== TESTIMONIALS & RECOGNITION ==================== -->
-    <section id="testimonials" class="py-20 border-b border-editorial-borderLight dark:border-editorial-borderDark bg-neutral-100/40 dark:bg-editorial-dark/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-xs font-bold tracking-widest text-editorial-accent uppercase">Critical Appraisal</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-neutral-900 dark:text-neutral-50">
-            Jury Citations & Reviews
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <div class="p-8 rounded-2xl bg-white dark:bg-editorial-surface border border-editorial-borderLight dark:border-editorial-borderDark flex flex-col justify-between shadow-sm">
-            <div class="space-y-4">
-              <div class="flex text-editorial-gold">
-                &#9733;&#9733;&#9733;&#9733;&#9733;
-              </div>
-              <blockquote class="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed italic font-serif">
-                "Nilkamal Bar’s camera exhibits that rare cinematic virtue: genuine patience. His frames never coerce or sensationalize; they allow the soil, the salt, and the human voice to claim their own truth."
-              </blockquote>
-            </div>
-            <div class="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
-              <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">International Jury Citation</p>
-              <p class="text-xs text-neutral-500">Documentary Voices Film Forum</p>
-            </div>
-          </div>
-
-          <div class="p-8 rounded-2xl bg-white dark:bg-editorial-surface border border-editorial-borderLight dark:border-editorial-borderDark flex flex-col justify-between shadow-sm">
-            <div class="space-y-4">
-              <div class="flex text-editorial-gold">
-                &#9733;&#9733;&#9733;&#9733;&#9733;
-              </div>
-              <blockquote class="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed italic font-serif">
-                "His investigative dispatches bridge the rare gap between lyrical poetry and stringent legal evidence. One of the sharpest young visual documentarians chronicling the climate frontlines."
-              </blockquote>
-            </div>
-            <div class="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
-              <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Prof. Ananya Sen</p>
-              <p class="text-xs text-neutral-500">Centre for Media & Social Ecology</p>
-            </div>
-          </div>
-
-          <div class="p-8 rounded-2xl bg-white dark:bg-editorial-surface border border-editorial-borderLight dark:border-editorial-borderDark flex flex-col justify-between shadow-sm">
-            <div class="space-y-4">
-              <div class="flex text-editorial-gold">
-                &#9733;&#9733;&#9733;&#9733;&#9733;
-              </div>
-              <blockquote class="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed italic font-serif">
-                "A meticulous visual researcher who treats field documentation not as content creation, but as an enduring civic record against historical amnesia."
-              </blockquote>
-            </div>
-            <div class="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
-              <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Editor-in-Chief</p>
-              <p class="text-xs text-neutral-500">Bengal Borderlands Journal</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== CONTACT SECTION ==================== -->
-    <section id="contact" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          <!-- Contact Narrative & Channels -->
-          <div class="lg:col-span-5 space-y-6">
-            <span class="text-xs font-bold tracking-widest text-editorial-accent uppercase">Dialogue & Collaboration</span>
-            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 dark:text-neutral-50">
-              Initiate an assignment or confidential tip.
-            </h2>
-            <p class="text-neutral-600 dark:text-neutral-300 text-base font-light leading-relaxed">
-              Whether you are an independent publication seeking field coverage, an institution commissioning documentary works, or an archivist wishing to collaborate, please leave a message.
-            </p>
-
-            <div class="space-y-4 pt-4 text-sm">
-              <div class="flex items-center space-x-3">
-                <span class="w-8 h-8 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-editorial-accent">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-brand-border/60 text-xs font-mono">
+              <div class="flex items-center space-x-2">
+                <span class="px-2.5 py-0.5 rounded bg-brand-card text-brand-accent font-semibold border border-brand-border">
+                  The Sinking Sundarbans (Ep. 04)
                 </span>
-                <div>
-                  <div class="text-xs text-neutral-500">Direct Inquiries</div>
-                  <a href="mailto:contact@nilkamalbar.com" class="font-semibold text-neutral-800 dark:text-neutral-200 hover:text-editorial-accent">contact@nilkamalbar.com</a>
-                </div>
+                <span class="text-slate-400">Published: Oct 2024</span>
               </div>
-
-              <div class="flex items-center space-x-3">
-                <span class="w-8 h-8 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-editorial-accent">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                </span>
-                <div>
-                  <div class="text-xs text-neutral-500">Headquarters</div>
-                  <div class="font-semibold text-neutral-800 dark:text-neutral-200">Kolkata, India • Open to Worldwide Travel</div>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-xl border border-editorial-borderLight dark:border-editorial-borderDark bg-neutral-100/50 dark:bg-editorial-surface/40 mt-4">
-                <div class="flex items-center space-x-2 text-xs font-bold text-neutral-700 dark:text-neutral-300">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  <span>Confidential Whistleblower Channels</span>
-                </div>
-                <p class="text-[11px] text-neutral-500 mt-1">
-                  For sensitive sources, signal messaging and PGP public key credentials are available upon encrypted email request.
-                </p>
-              </div>
-            </div>
-
-            <!-- Social Media Hub -->
-            <div class="pt-4">
-              <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Connect on Public Platforms</p>
-              <div class="flex flex-wrap gap-2 text-xs font-medium">
-                <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-editorial-accent hover:text-editorial-accent transition-all">Vimeo</a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-editorial-accent hover:text-editorial-accent transition-all">YouTube</a>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-editorial-accent hover:text-editorial-accent transition-all">X (Twitter)</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-editorial-accent hover:text-editorial-accent transition-all">LinkedIn</a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-editorial-accent hover:text-editorial-accent transition-all">Instagram</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Functional Client-side Form -->
-          <div class="lg:col-span-7">
-            <div class="p-8 sm:p-10 rounded-2xl border border-editorial-borderLight dark:border-editorial-borderDark bg-white dark:bg-editorial-surface/40 shadow-sm relative">
               
-              <!-- Success Feedback Alert (Hidden by default) -->
-              <div id="form-success-banner" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-sm">
-                <div class="flex items-center space-x-2 font-semibold">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                  <span>Dispatch Received</span>
+              <!-- Direct Timestamp Jump button -->
+              <a href="https://youtube.com/@thenilkamal" target="_blank" 
+                 class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded bg-brand-accent/15 border border-brand-accent/40 text-brand-accent hover:bg-brand-accent hover:text-white transition-colors">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <span class="badge-mono font-bold">Timestamp 14:32</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-xs sm:text-sm">
+              <!-- What was said in the video -->
+              <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/30">
+                <div class="flex items-center space-x-1.5 text-xs font-semibold text-red-400 mb-1.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                  <span>Inadvertent Statement in Voiceover</span>
                 </div>
-                <p class="text-xs mt-1 text-emerald-800 dark:text-emerald-200">
-                  Thank you for reaching out. Nilkamal Bar or his editorial associate will review your dispatch and respond within 48 hours.
+                <p class="text-slate-300 italic font-serif leading-relaxed">
+                  "...Between 2012 and 2022, Ghoramara island lost over 45% of its total agrarian embankment per year..."
                 </p>
               </div>
 
-              <form id="contact-form" class="space-y-6" novalidate onsubmit="handleContactSubmit(event)">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-2">
-                      Full Name *
-                    </label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      name="name" 
-                      required
-                      placeholder="e.g., Sarah Jenkins" 
-                      class="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/60 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-editorial-accent focus:border-transparent text-sm transition-all"
-                    >
-                    <span id="name-error" class="hidden text-[11px] text-red-500 mt-1">Please enter your name.</span>
-                  </div>
-
-                  <div>
-                    <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-2">
-                      Email Address *
-                    </label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      name="email" 
-                      required
-                      placeholder="e.g., s.jenkins@institution.org" 
-                      class="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/60 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-editorial-accent focus:border-transparent text-sm transition-all"
-                    >
-                    <span id="email-error" class="hidden text-[11px] text-red-500 mt-1">Please enter a valid email address.</span>
-                  </div>
+              <!-- Factual correction -->
+              <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/30">
+                <div class="flex items-center space-x-1.5 text-xs font-semibold text-emerald-400 mb-1.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>Verified Correction &amp; Clarification</span>
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label for="subject-type" class="block text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-2">
-                      Nature of Query
-                    </label>
-                    <select 
-                      id="subject-type" 
-                      name="subject-type" 
-                      class="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/60 text-neutral-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-editorial-accent transition-all"
-                    >
-                      <option value="documentary">Film Commission / Directing</option>
-                      <option value="press">Investigative Journalism Pitch</option>
-                      <option value="speaking">Keynote / Festival Screening</option>
-                      <option value="research">Academic / Research Grant</option>
-                      <option value="other">General Note / Hello</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label for="organization" class="block text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-2">
-                      Organization / Publication
-                    </label>
-                    <input 
-                      type="text" 
-                      id="organization" 
-                      name="organization" 
-                      placeholder="e.g., Media Collective, University" 
-                      class="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/60 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-editorial-accent focus:border-transparent text-sm transition-all"
-                    >
-                  </div>
-                </div>
-
-                <div>
-                  <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-2">
-                    Detailed Message *
-                  </label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="5" 
-                    required
-                    placeholder="Briefly describe the project, timelines, location, or scope of inquiry..."
-                    class="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/60 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-editorial-accent focus:border-transparent text-sm transition-all resize-none"
-                  ></textarea>
-                  <span id="message-error" class="hidden text-[11px] text-red-500 mt-1">Please provide message details.</span>
-                </div>
-
-                <button 
-                  type="submit" 
-                  id="submit-btn"
-                  class="w-full sm:w-auto px-8 py-3.5 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 font-semibold rounded-full text-sm hover:bg-editorial-accent dark:hover:bg-editorial-accent dark:hover:text-white transition-all shadow-md flex items-center justify-center space-x-2"
-                >
-                  <span>Transmit Message</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </button>
-              </form>
+                <p class="text-slate-200 leading-relaxed">
+                  The loss was <strong class="text-white">approximately 4.5% annually</strong> (totalling around 45% across the full decade-long span, not per year).
+                </p>
+              </div>
             </div>
+
+            <!-- Source & Context Citation -->
+            <div class="mt-3 pt-3 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-slate-400 gap-2">
+              <div class="flex items-center space-x-1">
+                <span class="text-slate-500 font-mono">Source citation:</span>
+                <span class="text-slate-300 font-medium">School of Oceanographic Studies, Jadavpur University Survey Report (2022)</span>
+              </div>
+              <span class="font-mono text-emerald-400/90 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40 self-start sm:self-auto">Status: Clarified in pinned comment &amp; description</span>
+            </div>
+
           </div>
 
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="border-t border-editorial-borderLight dark:border-editorial-borderDark bg-editorial-lightBg dark:bg-editorial-charcoal py-14 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-editorial-borderLight dark:border-editorial-borderDark">
-        <div class="text-center md:text-left">
-          <span class="font-serif text-2xl font-bold tracking-wider text-neutral-900 dark:text-neutral-100">
-            NILKAMAL BAR
-          </span>
-          <p class="text-xs text-neutral-500 mt-1">
-            Visual Storytelling • Ethical Investigation • South Asian Borderlands
-          </p>
-        </div>
-
-        <div class="flex items-center space-x-6 text-xs text-neutral-600 dark:text-neutral-400 font-medium">
-          <a href="#about" class="hover:text-editorial-accent transition-colors">About</a>
-          <a href="#documentaries" class="hover:text-editorial-accent transition-colors">Films</a>
-          <a href="#research" class="hover:text-editorial-accent transition-colors">Research</a>
-          <a href="#contact" class="hover:text-editorial-accent transition-colors">Contact</a>
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-editorial-accent transition-colors flex items-center space-x-1 font-semibold">
-            <span>Top</span>
-            <span>&uarr;</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-        <p>&copy; <span id="current-year"></span> Nilkamal Bar. All rights reserved. Self-contained & Cloudflare Pages ready.</p>
-        <p class="text-[11px] italic">
-          Designed with editorial precision and zero proprietary tracking cookies.
-        </p>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- ==================== MODAL 1: VIDEO PREVIEW / LIGHTBOX ==================== -->
-  <div id="video-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300 opacity-0" aria-modal="true" role="dialog">
-    <div class="relative w-full max-w-3xl bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl text-white transform scale-95 transition-transform duration-300" id="video-modal-card">
-      
-      <!-- Close button -->
-      <button onclick="closeVideoModal()" aria-label="Close modal" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-neutral-800 flex items-center justify-center text-neutral-300 hover:text-white transition-all">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-
-      <!-- Video Simulated Canvas / Player Mockup -->
-      <div class="relative aspect-video bg-neutral-900 flex items-center justify-center overflow-hidden">
-        <img id="modal-video-image" src="" alt="Trailer Still" class="w-full h-full object-cover opacity-60">
-        
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-          <div class="w-16 h-16 rounded-full bg-editorial-accent text-white flex items-center justify-center pl-1 shadow-2xl animate-pulse">
-            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span class="mt-4 text-xs font-mono tracking-widest text-neutral-300 uppercase">Private Screener Teaser // High Definition</span>
-        </div>
-      </div>
-
-      <!-- Content Meta -->
-      <div class="p-6 sm:p-8 space-y-4">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <span id="modal-video-duration" class="text-xs font-mono text-editorial-gold uppercase font-semibold"></span>
-          <span id="modal-video-laurel" class="text-xs bg-neutral-800 px-2.5 py-0.5 rounded text-neutral-300"></span>
-        </div>
-        <h3 id="modal-video-title" class="font-serif text-2xl sm:text-3xl font-bold text-white"></h3>
-        <p id="modal-video-desc" class="text-sm text-neutral-300 font-light leading-relaxed"></p>
-
-        <div class="pt-4 border-t border-neutral-800 flex flex-wrap items-center justify-between gap-4">
-          <span class="text-xs text-neutral-500">For full festival screeners and educational licenses:</span>
-          <a href="#contact" onclick="closeVideoModal()" class="px-5 py-2 rounded-full bg-white text-neutral-950 font-semibold text-xs hover:bg-editorial-accent hover:text-white transition-colors">
-            Request Screener Link
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ==================== MODAL 2: ARTICLE READING PREVIEW ==================== -->
-  <div id="article-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300 opacity-0" aria-modal="true" role="dialog">
-    <div class="relative w-full max-w-2xl bg-white dark:bg-editorial-surface border border-neutral-200 dark:border-neutral-700 rounded-2xl overflow-hidden shadow-2xl p-6 sm:p-8 transform scale-95 transition-transform duration-300" id="article-modal-card">
-      
-      <button onclick="closeArticleModal()" aria-label="Close reading view" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-editorial-accent flex items-center justify-center">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-
-      <div class="text-xs font-mono text-editorial-accent uppercase tracking-widest mb-2 font-semibold">Field Synopsis & Overview</div>
-      <h3 id="article-modal-title" class="font-serif text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4"></h3>
-      <div class="w-12 h-0.5 bg-editorial-accent mb-5"></div>
-      
-      <p id="article-modal-body" class="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed font-light mb-6"></p>
-
-      <div class="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between text-xs">
-        <span class="text-neutral-400">Archival ID: NB-JRNL-2024</span>
-        <button onclick="closeArticleModal()" class="px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-full font-medium text-neutral-700 dark:text-neutral-300 hover:border-editorial-accent">
-          Close Window
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
-  <script>
-    // 1. Dynamic Year Setter
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // 2. Dark/Light Theme Switching with localStorage & OS Preference
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const moonIcon = document.getElementById('theme-icon-moon');
-    const sunIcon = document.getElementById('theme-icon-sun');
-    const htmlElement = document.documentElement;
-
-    function applyTheme(isDark) {
-      if (isDark) {
-        htmlElement.classList.add('dark');
-        moonIcon.classList.add('hidden');
-        sunIcon.classList.remove('hidden');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        htmlElement.classList.remove('dark');
-        sunIcon.classList.add('hidden');
-        moonIcon.classList.remove('hidden');
-        localStorage.setItem('theme', 'light');
-      }
-    }
-
-    // Initialize Theme
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-      applyTheme(true);
-    } else {
-      applyTheme(false);
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-      const isCurrentlyDark = htmlElement.classList.contains('dark');
-      applyTheme(!isCurrentlyDark);
-    });
-
-    // 3. Mobile Menu Navigation Drawer Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // 4. Portfolio Category Filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Reset active button styling
-        filterButtons.forEach(b => {
-          b.classList.remove('bg-editorial-accent', 'text-white', 'border-editorial-accent');
-          b.classList.add('border-neutral-300', 'dark:border-neutral-700', 'text-neutral-600', 'dark:text-neutral-300');
-        });
-
-        // Activate clicked button
-        btn.classList.add('bg-editorial-accent', 'text-white', 'border-editorial-accent');
-        btn.classList.remove('border-neutral-300', 'dark:border-neutral-700', 'text-neutral-600', 'dark:text-neutral-300');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        portfolioItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // 5. Video Preview Lightbox Logic
-    const videoModal = document.getElementById('video-modal');
-    const videoModalCard = document.getElementById('video-modal-card');
-    const modalVideoTitle = document.getElementById('modal-video-title');
-    const modalVideoDesc = document.getElementById('modal-video-desc');
-    const modalVideoDuration = document.getElementById('modal-video-duration');
-    const modalVideoLaurel = document.getElementById('modal-video-laurel');
-    const modalVideoImage = document.getElementById('modal-video-image');
-
-    function openVideoModal(title, desc, duration, laurel, imgSrc) {
-      modalVideoTitle.textContent = title;
-      modalVideoDesc.textContent = desc;
-      modalVideoDuration.textContent = duration;
-      modalVideoLaurel.textContent = laurel;
-      modalVideoImage.src = imgSrc;
-
-      videoModal.classList.remove('hidden');
-      setTimeout(() => {
-        videoModal.classList.remove('opacity-0');
-        videoModalCard.classList.remove('scale-95');
-      }, 10);
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeVideoModal() {
-      videoModal.classList.add('opacity-0');
-      videoModalCard.classList.add('scale-95');
-      setTimeout(() => {
-        videoModal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }, 300);
-    }
-
-    // 6. Article Preview Modal Logic
-    const articleModal = document.getElementById('article-modal');
-    const articleModalCard = document.getElementById('article-modal-card');
-    const articleModalTitle = document.getElementById('article-modal-title');
-    const articleModalBody = document.getElementById('article-modal-body');
-
-    function openArticleModal(title, text) {
-      articleModalTitle.textContent = title;
-      articleModalBody.textContent = text;
-
-      articleModal.classList.remove('hidden');
-      setTimeout(() => {
-        articleModal.classList.remove('opacity-0');
-        articleModalCard.classList.remove('scale-95');
-      }, 10);
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeArticleModal() {
-      articleModal.classList.add('opacity-0');
-      articleModalCard.classList.add('scale-95');
-      setTimeout(() => {
-        articleModal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }, 300);
-    }
-
-    // Close modals upon backdrop click
-    videoModal.addEventListener('click', (e) => {
-      if (e.target === videoModal) closeVideoModal();
-    });
-    articleModal.addEventListener('click', (e) => {
-      if (e.target === articleModal) closeArticleModal();
-    });
-
-    // Close on Escape key press
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeVideoModal();
-        closeArticleModal();
-      }
-    });
-
-    // 7. Client-Side Contact Form Handling & Validation
-    function handleContactSubmit(event) {
-      event.preventDefault();
-      
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-      
-      const nameError = document.getElementById('name-error');
-      const emailError = document.getElementById('email-error');
-      const messageError = document.getElementById('message-error');
-      const successBanner = document.getElementById('form-success-banner');
-      const submitBtn = document.getElementById('submit-btn');
-
-      let isValid = true;
-
-      // Validate name
-      if (!nameInput.value.trim()) {
-        nameError.classList.remove('hidden');
-        nameInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        nameError.classList.add('hidden');
-        nameInput.classList.remove('border-red-500');
-      }
-
-      // Validate email
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailInput.value.trim())) {
-        emailError.classList.remove('hidden');
-        emailInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        emailError.classList.add('hidden');
-        emailInput.classList.remove('border-red-500');
-      }
-
-      // Validate message
-      if (!messageInput.value.trim() || messageInput.value.trim().length < 5) {
-        messageError.classList.remove('hidden');
-        messageInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        messageError.classList.add('hidden');
-        messageInput.classList.remove('border-red-500');
-      }
-
-      if (isValid) {
-        // Mock feedback without external paid backend
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = `<span>Transmitting...</span>`;
-        
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = `<span>Transmit Message</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>`;
-          successBanner.classList.remove('hidden');
-          document.getElementById('contact-form').reset();
-          successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 600);
-      }
-    }
-  </script>
-</body>
-</html>
+          <!--

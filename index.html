@@ -1,335 +1,296 @@
-```html
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nilkamal Bar | Documentary Creator & Video Factual Registry</title>
-  <meta name="description" content="Official portfolio and factual correction registry of Nilkamal Bar — College student & independent Bengali documentary filmmaker on YouTube.">
-
-  <!-- Inter & JetBrains Mono Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS CDN -->
+  <title>Nilkamal Bar | Bengali Documentaries & Errata Log</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Inter"', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          colors: {
-            brand: {
-              charcoal: '#0e1015',
-              surface: '#151821',
-              card: '#1b202c',
-              border: '#282f3f',
-              accent: '#d97736', // Warm amber film tone
-              accentHover: '#c26527',
-              redBadge: '#ef4444',
-              greenBadge: '#10b981',
-              lightBg: '#f8fafc',
-              lightSurface: '#ffffff',
-              lightBorder: '#e2e8f0'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    /* Sleek scrollbar styling */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #47556944;
-      border-radius: 999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #47556988;
-    }
-    .badge-mono {
-      font-feature-settings: "tnum";
-      font-variant-numeric: tabular-nums;
-    }
-  </style>
 </head>
+<body class="bg-[#0b0c10] text-neutral-200 font-sans antialiased selection:bg-[#d97736] selection:text-white">
 
-<body class="bg-brand-charcoal text-slate-200 font-sans selection:bg-brand-accent selection:text-white min-h-screen flex flex-col antialiased">
-
-  <!-- ==================== HEADER ==================== -->
-  <header class="sticky top-0 z-50 bg-brand-charcoal/90 backdrop-blur-md border-b border-brand-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand & Identity -->
-      <a href="#hero" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-full overflow-hidden border border-brand-accent/40 group-hover:border-brand-accent transition-colors">
-          <img src="1000128485.png" alt="Nilkamal Bar" class="w-full h-full object-cover">
-        </div>
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-[#0f1015]/90 backdrop-blur-md border-b border-[#20232d] px-4 py-3.5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <!-- Thumbnail Avatar -->
+        <img 
+          src="https://i.ibb.co/6c2r9k0X/1000128485.png" 
+          alt="Nilkamal Bar" 
+          onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nilkamal+Bar&background=d97736&color=fff';"
+          class="w-10 h-10 rounded-full object-cover border border-[#34384b]"
+        />
         <div>
-          <span class="text-base font-bold text-white tracking-wide block group-hover:text-brand-accent transition-colors">
-            NILKAMAL BAR
-          </span>
-          <span class="text-[11px] font-mono text-slate-400 block tracking-wider uppercase">
-            Bengali Documentaries • Errata Log
-          </span>
+          <h1 class="text-sm font-bold tracking-wider text-white uppercase leading-none">NILKAMAL BAR</h1>
+          <span class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">BENGALI DOCUMENTARIES • ERRATA LOG</span>
         </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-300">
-        <a href="#errata" class="hover:text-brand-accent transition-colors flex items-center space-x-1.5">
-          <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
-          <span>Timeline Registry</span>
-        </a>
-        <a href="#documentaries" class="hover:text-brand-accent transition-colors">Documentaries</a>
-        <a href="#report" class="hover:text-brand-accent transition-colors">Submit Mistake</a>
-      </nav>
-
-      <!-- Social Hyperlinks (Header) -->
-      <div class="hidden sm:flex items-center space-x-3">
-        <!-- YouTube -->
-        <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" 
-           title="YouTube @thenilkamal"
-           class="p-2 rounded-lg bg-brand-surface border border-brand-border hover:border-red-500 hover:text-red-500 transition-all text-slate-400">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-          </svg>
-        </a>
-
-        <!-- Twitter / X -->
-        <a href="https://x.com/the_nilkamal" target="_blank" rel="noopener noreferrer" 
-           title="X (Twitter) @the_nilkamal"
-           class="p-2 rounded-lg bg-brand-surface border border-brand-border hover:border-sky-400 hover:text-sky-400 transition-all text-slate-400">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/thenilkamal" target="_blank" rel="noopener noreferrer" 
-           title="Instagram @thenilkamal"
-           class="p-2 rounded-lg bg-brand-surface border border-brand-border hover:border-pink-500 hover:text-pink-500 transition-all text-slate-400">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-        </a>
       </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" aria-label="Toggle navigation" class="md:hidden p-2 text-slate-300 hover:text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <!-- Mobile / Menu Icon -->
+      <button class="text-neutral-400 hover:text-white p-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
       </button>
-
-    </div>
-
-    <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-brand-surface border-b border-brand-border px-6 py-4 space-y-3 text-sm">
-      <a href="#errata" class="block text-slate-300 hover:text-brand-accent py-1">Timeline Registry (Errata)</a>
-      <a href="#documentaries" class="block text-slate-300 hover:text-brand-accent py-1">Documentaries</a>
-      <a href="#report" class="block text-slate-300 hover:text-brand-accent py-1">Submit Mistake</a>
-      <div class="pt-3 border-t border-brand-border flex items-center space-x-4">
-        <a href="https://youtube.com/@thenilkamal" target="_blank" class="text-xs text-slate-400 hover:text-red-400">YouTube</a>
-        <a href="https://x.com/the_nilkamal" target="_blank" class="text-xs text-slate-400 hover:text-sky-400">Twitter (X)</a>
-        <a href="https://instagram.com/thenilkamal" target="_blank" class="text-xs text-slate-400 hover:text-pink-400">Instagram</a>
-      </div>
     </div>
   </header>
 
-  <main class="flex-grow">
+  <!-- ==================== 1. HERO SECTION (PHOTO + BIO) ==================== -->
+  <section class="py-12 px-4 max-w-2xl mx-auto text-center">
     
-    <!-- ==================== HERO / BIO SECTION ==================== -->
-    <section id="hero" class="py-14 sm:py-20 border-b border-brand-border relative overflow-hidden">
-      <!-- Minimalist glow background -->
-      <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-14">
-          
-          <!-- Bio Text -->
-          <div class="flex-1 text-center md:text-left space-y-5">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-accent/15 border border-brand-accent/30 text-brand-accent text-xs font-mono font-medium tracking-wide">
-              <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-              <span>College Student &amp; Independent Creator</span>
-            </div>
-
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Bengali Documentaries with Uncompromising Factual Accountability.
-            </h1>
-
-            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
-              I am <span class="text-white font-semibold">Nilkamal Bar</span>. I research and produce in-depth documentary videos in <span class="text-brand-accent font-semibold">Bengali</span> for my YouTube channel (<a href="https://youtube.com/@thenilkamal" target="_blank" class="underline underline-offset-4 hover:text-white">@thenilkamal</a>).
-            </p>
-
-            <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
-              Researching extensive historical and sociopolitical topics means unintentional slips or outdated facts can occasionally occur. I believe truth and transparency come before pride. This website serves as an open, timestamped registry documenting all inadvertent errors, context clarifications, and verified citations for every video released.
-            </p>
-
-            <!-- Quick Action Links -->
-            <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
-              <a href="#errata" class="px-6 py-3 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-white font-semibold text-sm transition-all shadow-lg shadow-brand-accent/20 flex items-center space-x-2">
-                <span>View Timeline Corrections</span>
-                <span>&darr;</span>
-              </a>
-              <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border text-slate-200 font-medium text-sm transition-all flex items-center space-x-2">
-                <svg class="w-4 h-4 fill-red-500" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                <span>Watch on YouTube</span>
-              </a>
-            </div>
-
-            <!-- Stats/Credibility summary -->
-            <div class="pt-4 grid grid-cols-3 gap-3 border-t border-brand-border text-center md:text-left">
-              <div>
-                <span class="text-xl font-bold font-mono text-white">100%</span>
-                <p class="text-xs text-slate-400">Open Correction Policy</p>
-              </div>
-              <div>
-                <span class="text-xl font-bold font-mono text-white">Bengali</span>
-                <p class="text-xs text-slate-400">Primary Language</p>
-              </div>
-              <div>
-                <span class="text-xl font-bold font-mono text-white">Student</span>
-                <p class="text-xs text-slate-400">Independent Researcher</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- User Provided Picture Frame -->
-          <div class="flex-shrink-0 relative">
-            <div class="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden bg-brand-surface border-2 border-brand-border shadow-2xl relative group">
-              <!-- Provided photo -->
-              <img 
-                src="1000128485.png" 
-                alt="Nilkamal Bar" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent"></div>
-              
-              <div class="absolute bottom-3 left-3 right-3 text-center md:text-left">
-                <span class="text-[11px] font-mono font-medium text-brand-accent bg-brand-charcoal/90 px-2.5 py-1 rounded-md border border-brand-border inline-block">
-                  Nilkamal Bar • @thenilkamal
-                </span>
-              </div>
-            </div>
-          </div>
-
+    <!-- Profile Card with Photo -->
+    <div class="inline-block relative rounded-2xl p-1 bg-gradient-to-b from-[#2e3242] to-[#161820] shadow-2xl mb-8">
+      <div class="rounded-xl overflow-hidden bg-[#161820] border border-[#272b38] w-64 sm:w-72 mx-auto">
+        <img 
+          src="https://i.ibb.co/6c2r9k0X/1000128485.png" 
+          alt="Nilkamal Bar" 
+          onerror="this.onerror=null; this.src='https://placehold.co/400x480/161820/d97736?text=Nilkamal+Bar';"
+          class="w-full h-72 sm:h-80 object-cover object-top"
+        />
+        <div class="py-3 px-4 bg-[#12131a] border-t border-[#222533] text-center">
+          <p class="text-xs font-mono text-[#d97736] tracking-wider">
+            Nilkamal Bar • @thenilkamal
+          </p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ==================== CORE SECTION: TIMELINE ERRATA & MISTAKES REGISTRY ==================== -->
-    <section id="errata" class="py-16 sm:py-20 bg-brand-surface/40 border-b border-brand-border">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Header & Explanation -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-          <div>
-            <div class="inline-flex items-center space-x-2 text-xs font-mono uppercase text-brand-accent tracking-wider font-semibold">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
-              <span>Integrity &amp; Public Transparency</span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">
-              Video Corrections &amp; Timeline Registry
-            </h2>
-            <p class="text-slate-400 text-sm mt-1 max-w-2xl">
-              An auditable public record of unintentional slips, dates, pronunciations, and updated data across my YouTube documentaries, mapped by exact video timelines.
-            </p>
-          </div>
+    <!-- Badge -->
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#d97736]/10 border border-[#d97736]/30 text-[#d97736] text-xs font-medium tracking-wide mb-5">
+      <span class="w-2 h-2 rounded-full bg-[#d97736] animate-pulse"></span>
+      <span>College Student & Independent Creator</span>
+    </div>
 
-          <!-- Fast Filter / Search -->
-          <div class="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
-            <div class="relative">
-              <input 
-                type="text" 
-                id="registrySearch" 
-                placeholder="Search error, topic, video..."
-                class="w-full sm:w-64 px-3.5 py-2 pl-9 bg-brand-charcoal border border-brand-border rounded-xl text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-accent"
-              />
-              <svg class="w-4 h-4 text-slate-500 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            </div>
+    <!-- Main Headline -->
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+      Bengali Documentaries with Uncompromising Factual Accountability.
+    </h2>
 
-            <select 
-              id="registryFilter" 
-              class="px-3 py-2 bg-brand-charcoal border border-brand-border rounded-xl text-xs text-slate-300 focus:outline-none focus:border-brand-accent"
-            >
-              <option value="all">All Documentaries</option>
-              <option value="Partition & Borderlands">Partition &amp; Borderlands</option>
-              <option value="The Sinking Sundarbans">The Sinking Sundarbans</option>
-              <option value="Bengal Renaissance Unknown Figures">Bengal Renaissance</option>
-              <option value="Great Bengal Famine Archives">Great Bengal Famine</option>
-            </select>
-          </div>
+    <!-- Bio Statement -->
+    <p class="text-neutral-300 text-sm sm:text-base leading-relaxed mb-4">
+      I am <strong class="text-white">Nilkamal Bar</strong>. I research and produce in-depth documentary videos in <span class="text-[#d97736] font-semibold">Bengali</span> for my YouTube channel (<a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-[#d97736]">@thenilkamal</a>).
+    </p>
+    <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
+      Researching extensive historical and sociopolitical topics means unintentional slips or outdated facts can occasionally occur. I believe truth and transparency must always come first.
+    </p>
+  </section>
+
+  <!-- ==================== 2. TIMELINE ERRATA REGISTRY ==================== -->
+  <section class="py-10 px-4 max-w-2xl mx-auto border-t border-[#1e2029]">
+    <div class="mb-6">
+      <h3 class="text-xl font-bold text-white tracking-tight">Public Errata & Corrections Log</h3>
+      <p class="text-xs text-neutral-400 mt-1 leading-relaxed">
+        An auditable public record of unintentional slips, dates, pronunciations, and updated data across my YouTube documentaries, mapped by exact video timelines.
+      </p>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="space-y-3 mb-6">
+      <div class="relative">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-neutral-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </span>
+        <input 
+          type="text" 
+          placeholder="Search error, topic, video..." 
+          class="w-full pl-9 pr-4 py-2.5 bg-[#14161f] border border-[#262a38] rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#d97736]"
+        />
+      </div>
+      <select class="w-full px-3.5 py-2.5 bg-[#14161f] border border-[#262a38] rounded-xl text-xs text-neutral-300 focus:outline-none focus:border-[#d97736]">
+        <option>All Documentaries</option>
+        <option>The Sinking Sundarbans (Ep. 04)</option>
+      </select>
+    </div>
+
+    <!-- Errata Record Card -->
+    <div class="bg-[#14161f] border border-[#262936] rounded-2xl p-5 shadow-lg space-y-4">
+      <div class="flex items-center justify-between text-xs font-mono">
+        <span class="text-[#d97736] font-semibold">The Sinking Sundarbans (Ep. 04)</span>
+        <span class="text-neutral-500">Published: Oct 2024</span>
+      </div>
+
+      <!-- Timestamp Pill -->
+      <div>
+        <span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded bg-[#d97736]/15 text-[#d97736] font-mono text-xs font-semibold">
+          <span>▶ Timestamp 14:32</span>
+        </span>
+      </div>
+
+      <!-- Inadvertent Statement (Red Callout) -->
+      <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40 text-xs">
+        <div class="flex items-center space-x-1.5 text-red-400 font-semibold mb-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          <span>Inadvertent Statement in Voiceover</span>
+        </div>
+        <p class="text-neutral-300 italic">
+          "...Between 2012 and 2022, Ghoramara island lost over 45% of its total agrarian embankment per year..."
+        </p>
+      </div>
+
+      <!-- Verified Correction (Green Callout) -->
+      <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40 text-xs">
+        <div class="flex items-center space-x-1.5 text-emerald-400 font-semibold mb-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span>Verified Correction & Clarification</span>
+        </div>
+        <p class="text-neutral-200">
+          The loss was <strong class="text-white">approximately 4.5% annually</strong> (totalling around 45% across the full decade-long span, not per year).
+        </p>
+      </div>
+
+      <!-- Citation & Verification Badge -->
+      <div class="text-[11px] text-neutral-400 space-y-1 pt-2 border-t border-[#20232f]">
+        <p><strong class="text-neutral-300">Source citation:</strong> School of Oceanographic Studies, Jadavpur University Survey Report (2022)</p>
+        <div class="inline-block mt-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono">
+          Status: Clarified in pinned comment & description
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. REPORT A MISTAKE SECTION ==================== -->
+  <section id="report-mistake" class="py-12 px-4 bg-[#0d0e12] border-t border-[#1e2029]">
+    <div class="max-w-xl mx-auto bg-[#16181f] border border-[#262936] rounded-2xl p-6 sm:p-8 shadow-2xl">
+      
+      <div class="text-center mb-6">
+        <span class="text-[11px] font-mono tracking-widest text-[#d97736] font-semibold uppercase">
+          Crowdsourced Accountability
+        </span>
+        <h2 class="text-2xl font-bold text-white mt-1.5 tracking-tight">
+          Spotted a Mistake in Any Video?
+        </h2>
+        <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
+          If you noticed an unintended slip, pronunciation error, wrong date, or missing citation in any of my Bengali documentaries, please submit it below with the exact timestamp.
+        </p>
+      </div>
+
+      <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your correction has been submitted.');">
+        <div>
+          <label class="block text-[11px] font-mono uppercase tracking-wider text-neutral-400 mb-1">
+            Documentary Video Title *
+          </label>
+          <input 
+            type="text" 
+            required 
+            placeholder="e.g., The Sinking Sundarbans" 
+            class="w-full px-3.5 py-2.5 bg-[#0f1015] border border-[#262936] rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#d97736]"
+          />
         </div>
 
-        <!-- Registry List / Table Container -->
-        <div class="space-y-4" id="errataContainer">
-          
-          <!-- Registry Card Item 1 -->
-          <div class="errata-card p-5 sm:p-6 bg-brand-surface rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-200" 
-               data-video="The Sinking Sundarbans" 
-               data-text="gasping delta erosion salinity rate gosaba hectare 2024">
-            
-            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-brand-border/60 text-xs font-mono">
-              <div class="flex items-center space-x-2">
-                <span class="px-2.5 py-0.5 rounded bg-brand-card text-brand-accent font-semibold border border-brand-border">
-                  The Sinking Sundarbans (Ep. 04)
-                </span>
-                <span class="text-slate-400">Published: Oct 2024</span>
-              </div>
-              
-              <!-- Direct Timestamp Jump button -->
-              <a href="https://youtube.com/@thenilkamal" target="_blank" 
-                 class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded bg-brand-accent/15 border border-brand-accent/40 text-brand-accent hover:bg-brand-accent hover:text-white transition-colors">
-                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                <span class="badge-mono font-bold">Timestamp 14:32</span>
-              </a>
-            </div>
+        <div>
+          <label class="block text-[11px] font-mono uppercase tracking-wider text-neutral-400 mb-1">
+            Timeline / Timestamp *
+          </label>
+          <input 
+            type="text" 
+            required 
+            placeholder="e.g., 14:32" 
+            class="w-full px-3.5 py-2.5 bg-[#0f1015] border border-[#262936] rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#d97736]"
+          />
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-xs sm:text-sm">
-              <!-- What was said in the video -->
-              <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/30">
-                <div class="flex items-center space-x-1.5 text-xs font-semibold text-red-400 mb-1.5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                  <span>Inadvertent Statement in Voiceover</span>
-                </div>
-                <p class="text-slate-300 italic font-serif leading-relaxed">
-                  "...Between 2012 and 2022, Ghoramara island lost over 45% of its total agrarian embankment per year..."
-                </p>
-              </div>
+        <div>
+          <label class="block text-[11px] font-mono uppercase tracking-wider text-neutral-400 mb-1">
+            What Was Stated Incorrectly? *
+          </label>
+          <input 
+            type="text" 
+            required 
+            placeholder="The spoken word or graphic on screen" 
+            class="w-full px-3.5 py-2.5 bg-[#0f1015] border border-[#262936] rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#d97736]"
+          />
+        </div>
 
-              <!-- Factual correction -->
-              <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/30">
-                <div class="flex items-center space-x-1.5 text-xs font-semibold text-emerald-400 mb-1.5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span>Verified Correction &amp; Clarification</span>
-                </div>
-                <p class="text-slate-200 leading-relaxed">
-                  The loss was <strong class="text-white">approximately 4.5% annually</strong> (totalling around 45% across the full decade-long span, not per year).
-                </p>
-              </div>
-            </div>
+        <div>
+          <label class="block text-[11px] font-mono uppercase tracking-wider text-neutral-400 mb-1">
+            Verified Correction & Source *
+          </label>
+          <input 
+            type="text" 
+            required 
+            placeholder="Correct data & book / archive source" 
+            class="w-full px-3.5 py-2.5 bg-[#0f1015] border border-[#262936] rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#d97736]"
+          />
+        </div>
 
-            <!-- Source & Context Citation -->
-            <div class="mt-3 pt-3 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-slate-400 gap-2">
-              <div class="flex items-center space-x-1">
-                <span class="text-slate-500 font-mono">Source citation:</span>
-                <span class="text-slate-300 font-medium">School of Oceanographic Studies, Jadavpur University Survey Report (2022)</span>
-              </div>
-              <span class="font-mono text-emerald-400/90 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40 self-start sm:self-auto">Status: Clarified in pinned comment &amp; description</span>
-            </div>
+        <div>
+          <label class="block text-[11px] font-mono uppercase tracking-wider text-neutral-400 mb-1">
+            Your Name or Handle (Optional)
+          </label>
+          <input 
+            type="text" 
+            placeholder="For attribution credits in pinned comment (e.g., Rahul)" 
+            class="w-full px-3.5 py-2.5 bg-[#0f1015] border border-[#262936] rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#d97736]"
+          />
+        </div>
 
-          </div>
+        <button 
+          type="submit" 
+          class="w-full mt-2 py-3 px-6 rounded-xl font-semibold text-xs text-white bg-[#d97736] hover:bg-[#c46526] transition-colors shadow-lg"
+        >
+          Submit for Verification
+        </button>
+      </form>
+    </div>
+  </section>
 
-          <!--
+  <!-- ==================== 4. FOOTER & SOCIAL HYPERLINKS ==================== -->
+  <footer class="bg-[#0b0c0f] border-t border-[#1e2029] py-12 px-4 text-center">
+    <div class="max-w-xl mx-auto space-y-6">
+      
+      <div>
+        <h3 class="text-xl font-bold tracking-wider text-white uppercase">Nilkamal Bar</h3>
+        <p class="text-xs text-neutral-400 mt-1">
+          College Student • Independent Bengali Documentary Filmmaker • Researcher
+        </p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <!-- YouTube -->
+        <a 
+          href="https://youtube.com/@thenilkamal" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl border border-[#262936] bg-[#14161d] text-xs font-mono text-neutral-200 hover:border-red-500 hover:text-white transition-colors"
+        >
+          <svg class="w-4 h-4 text-red-500 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>@thenilkamal</span>
+        </a>
+
+        <!-- Twitter / X -->
+        <a 
+          href="https://x.com/the_nilkamal" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl border border-[#262936] bg-[#14161d] text-xs font-mono text-neutral-200 hover:border-sky-400 hover:text-white transition-colors"
+        >
+          <svg class="w-3.5 h-3.5 text-sky-400 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>@the_nilkamal</span>
+        </a>
+
+        <!-- Instagram -->
+        <a 
+          href="https://instagram.com/thenilkamal" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl border border-[#262936] bg-[#14161d] text-xs font-mono text-neutral-200 hover:border-pink-500 hover:text-white transition-colors"
+        >
+          <svg class="w-3.5 h-3.5 text-pink-500 fill-none stroke-currentColor stroke-[2]" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@thenilkamal</span>
+        </a>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="pt-6 border-t border-[#1a1c24] text-[11px] text-neutral-500 space-y-1">
+        <p>© 2026 Nilkamal Bar. All documentary factual updates logged in public record.</p>
+        <p class="text-neutral-600">Committed to honest independent Bengali research.</p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -51,23 +51,6 @@
       transform: translateY(-1.5px);
     }
 
-    .glass-input {
-      background: rgba(3, 7, 18, 0.6);
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      transition: all 0.2s ease;
-      font-size: 16px;
-    }
-    @media (min-width: 640px) {
-      .glass-input {
-        font-size: 0.875rem;
-      }
-    }
-    .glass-input:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.35);
-      outline: none;
-    }
-
     .bg-grid-tech {
       background-size: 32px 32px;
       background-image: 
@@ -151,7 +134,10 @@
 
     <!-- CARDS FEED CONTAINER -->
     <div id="errata-feed" class="space-y-6 sm:space-y-8">
-      <!-- Injected dynamically via script -->
+      <div class="text-center py-12 text-slate-400 font-mono-custom text-xs sm:text-sm flex items-center justify-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+        <span>তথ্য সিঙ্ক করা হচ্ছে...</span>
+      </div>
     </div>
   </main>
 
@@ -159,7 +145,7 @@
   <footer class="mt-16 sm:mt-20 border-t border-slate-900 bg-[#02050e] py-10 sm:py-12 px-4 md:px-8">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       <div>
-        <p id="secret-creator-trigger" class="text-sm font-bold text-white tracking-wider uppercase cursor-default select-none active:text-blue-400 transition-colors inline-block">
+        <p class="text-sm font-bold text-white tracking-wider uppercase inline-block">
           Nilkamal Bar
         </p>
         <p class="text-xs text-slate-500 mt-0.5">Committed to honest, peer-checked independent Bengali journalism.</p>
@@ -191,81 +177,13 @@
     </div>
   </footer>
 
-  <!-- ==================== CREATOR STUDIO MODAL ==================== -->
-  <div id="creator-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
-    <div class="glow-blue-card rounded-2xl max-w-2xl w-full p-5 sm:p-8 relative border border-blue-500/40 max-h-[92vh] overflow-y-auto">
-      <button onclick="closeCreatorPanel()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">✕</button>
-
-      <div class="mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 pr-8">
-        <div>
-          <span class="text-[10px] font-mono-custom text-blue-400 uppercase tracking-widest font-bold">Creator Workspace</span>
-          <h3 id="panel-heading" class="text-lg sm:text-xl font-bold text-white mt-0.5">Errata Editor</h3>
-        </div>
-        <button type="button" onclick="handleChangePassword()" class="text-[11px] font-mono-custom text-slate-400 hover:text-blue-400 underline self-start sm:self-auto cursor-pointer">
-          🔑 Change Password
-        </button>
-      </div>
-
-      <!-- FORM -->
-      <form id="creator-form" onsubmit="handleFormSubmit(event)" class="space-y-3.5 sm:space-y-4">
-        <input type="hidden" id="edit-index" value="-1" />
-        
-        <div>
-          <label class="block text-xs font-mono-custom text-slate-300 mb-1">YouTube Video Link / URL *</label>
-          <input id="form-url" type="text" required placeholder="https://youtu.be/..." class="w-full px-3.5 py-2.5 rounded-xl text-white glass-input" />
-        </div>
-        <div>
-          <label class="block text-xs font-mono-custom text-slate-300 mb-1">Video Title *</label>
-          <input id="form-title" type="text" required placeholder="ভিডিওর শিরোনাম" class="w-full px-3.5 py-2.5 rounded-xl text-white glass-input" />
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-mono-custom text-slate-300 mb-1">Timestamp *</label>
-            <input id="form-time" type="text" required placeholder="e.g. 01:42" class="w-full px-3.5 py-2.5 rounded-xl text-white glass-input" />
-          </div>
-          <div>
-            <label class="block text-xs font-mono-custom text-slate-300 mb-1">Source / Reference *</label>
-            <input id="form-source" type="text" required placeholder="গ্রন্থ বা আর্কাইভাল সূত্র" class="w-full px-3.5 py-2.5 rounded-xl text-white glass-input" />
-          </div>
-        </div>
-        <div>
-          <label class="block text-xs font-mono-custom text-red-400 mb-1">ভিডিওতে অসাবধানতাবশত কী বলা হয়েছিল? *</label>
-          <input id="form-mistake" type="text" required placeholder="ভুল উচ্চারণ বা তথ্য" class="w-full px-3.5 py-2.5 rounded-xl text-white glass-input" />
-        </div>
-        <div>
-          <label class="block text-xs font-mono-custom text-emerald-400 mb-1">সঠিক তথ্য ও ব্যাখ্যা *</label>
-          <textarea id="form-correction" rows="3" required placeholder="প্রকৃত সত্য তথ্য লিখুন" class="w-full px-3.5 py-2.5 rounded-xl text-white glass-input"></textarea>
-        </div>
-
-        <!-- Attachment Link Option -->
-        <div class="p-3 rounded-xl bg-blue-950/20 border border-blue-500/20 space-y-2">
-          <label class="block text-xs font-mono-custom text-blue-300">
-            Attachment Document / Image URL (ঐচ্ছিক PDF বা JPG)
-          </label>
-          <input id="form-attachment" type="text" placeholder="e.g. attachments/proof.pdf বা Google Drive/CDN লিংক" class="w-full px-3.5 py-2 rounded-lg text-white glass-input text-xs" />
-          <p class="text-[10px] text-slate-400">GitHub-এর `attachments/` ফোল্ডারের ফাইল পাথ অথবা ড্রাইভে আপলোড করা ফাইলের শেয়ার লিঙ্ক দিন।</p>
-        </div>
-
-        <div class="pt-2 flex items-center justify-end gap-3">
-          <button type="button" id="cancel-edit-btn" onclick="cancelEditing()" class="hidden px-4 py-2.5 rounded-xl text-xs font-mono-custom text-amber-400 hover:text-amber-300">Cancel Edit</button>
-          <button type="button" onclick="closeCreatorPanel()" class="px-4 py-2.5 rounded-xl text-xs font-mono-custom text-slate-400 hover:text-white">Close</button>
-          <button type="submit" id="submit-btn" class="btn-neon-glow px-6 py-2.5 rounded-xl text-xs font-mono-custom font-bold cursor-pointer">Publish to Website</button>
-        </div>
-      </form>
-
-      <!-- MANAGE EXISTING CORRECTIONS -->
-      <div class="mt-8 pt-6 border-t border-slate-800">
-        <h4 class="text-xs font-mono-custom text-slate-400 uppercase tracking-wider mb-3">Published Corrections (Edit / Delete)</h4>
-        <div id="creator-records-list" class="space-y-2.5 max-h-56 overflow-y-auto pr-1">
-          <!-- Dynamically populated -->
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ==================== SCRIPT ENGINE ==================== -->
   <script>
-    const DEFAULT_RECORDS = [
+    // আপনার প্রকাশিত Google Sheets CSV লিঙ্ক
+    const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQuWS76keJTFLaMhQbAHgxT03wW8JTUNMVr7MLaJS9NnRRRr_xTzzGNIeuCKa8KxQD6SpQWpbHp2gh5/pub?output=csv";
+
+    // ব্যাকআপ রেকর্ড
+    const FALLBACK_RECORDS = [
       {
         id: 'ei5iLfJcEuA',
         title: 'ক্ষমতার 48 টি সূত্র | The 48 Laws of Power | Episode 1',
@@ -279,21 +197,89 @@
       }
     ];
 
-    function getStoredRecords() {
-      try {
-        const stored = localStorage.getItem('nilkamal_errata_records_v3');
-        return stored ? JSON.parse(stored) : DEFAULT_RECORDS;
-      } catch (err) {
-        return DEFAULT_RECORDS;
+    function parseCSV(text) {
+      const lines = [];
+      let row = [];
+      let inQuotes = false;
+      let cur = '';
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const nextChar = text[i + 1];
+
+        if (char === '"') {
+          if (inQuotes && nextChar === '"') {
+            cur += '"';
+            i++;
+          } else {
+            inQuotes = !inQuotes;
+          }
+        } else if (char === ',' && !inQuotes) {
+          row.push(cur.trim());
+          cur = '';
+        } else if ((char === '\r' || char === '\n') && !inQuotes) {
+          if (char === '\r' && nextChar === '\n') i++;
+          row.push(cur.trim());
+          if (row.some(cell => cell.length > 0)) lines.push(row);
+          row = [];
+          cur = '';
+        } else {
+          cur += char;
+        }
       }
+      if (cur || row.length > 0) {
+        row.push(cur.trim());
+        if (row.some(cell => cell.length > 0)) lines.push(row);
+      }
+      return lines;
     }
 
-    function saveAndRender(records) {
+    async function loadRecordsFromSheet() {
+      if (!GOOGLE_SHEETS_CSV_URL) {
+        renderFeed(FALLBACK_RECORDS);
+        return;
+      }
+
       try {
-        localStorage.setItem('nilkamal_errata_records_v3', JSON.stringify(records));
-      } catch (err) {}
-      renderFeed(records);
-      renderCreatorRecordsList(records);
+        const cacheBuster = GOOGLE_SHEETS_CSV_URL + (GOOGLE_SHEETS_CSV_URL.includes('?') ? '&' : '?') + 't=' + Date.now();
+        const response = await fetch(cacheBuster);
+        if (!response.ok) throw new Error('Network error');
+        const csvText = await response.text();
+        const rows = parseCSV(csvText);
+
+        if (rows.length <= 1) {
+          renderFeed(FALLBACK_RECORDS);
+          return;
+        }
+
+        const dataRows = rows.slice(1);
+        const parsedRecords = [];
+
+        for (const row of dataRows) {
+          const [videoUrl, title, time, mistake, correction, source, attachment, date] = row;
+          if (!videoUrl || !title) continue;
+
+          const vId = extractVideoId(videoUrl);
+          if (!vId) continue;
+
+          parsedRecords.push({
+            id: vId,
+            title: title || '',
+            time: time || '00:00',
+            seconds: parseTimestamp(time || '00:00'),
+            mistake: mistake || '',
+            correction: correction || '',
+            source: source || '',
+            attachment: attachment || '',
+            date: date || 'Verified'
+          });
+        }
+
+        renderFeed(parsedRecords.length > 0 ? parsedRecords : FALLBACK_RECORDS);
+      } catch (err) {
+        console.warn('Google Sheets লোড হয়নি, ব্যাকআপ ডেটা দেখানো হচ্ছে:', err);
+        renderFeed(FALLBACK_RECORDS);
+      }
     }
 
     function renderFeed(records) {
@@ -399,120 +385,6 @@
       `}).join('');
     }
 
-    function renderCreatorRecordsList(records) {
-      const container = document.getElementById('creator-records-list');
-      if (!container) return;
-
-      if (records.length === 0) {
-        container.innerHTML = `<div class="text-xs text-slate-500 italic py-2">বর্তমানে কোনো সংশোধনী নেই।</div>`;
-        return;
-      }
-
-      container.innerHTML = records.map((item, idx) => `
-        <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-900/70 border border-slate-800 text-xs">
-          <div class="truncate mr-3">
-            <span class="font-bold text-white block truncate">${item.title}</span>
-            <span class="text-[10px] font-mono-custom text-blue-400">${item.time}</span>
-          </div>
-          <div class="flex items-center gap-2 shrink-0">
-            <button 
-              type="button" 
-              onclick="startEditCorrection(${idx})" 
-              class="px-2.5 py-1 rounded bg-blue-600/30 text-blue-300 hover:bg-blue-600 hover:text-white border border-blue-500/40 text-[11px] font-mono-custom transition-colors"
-            >
-              Edit
-            </button>
-            <button 
-              type="button" 
-              onclick="deleteCorrection(${idx})" 
-              class="px-2.5 py-1 rounded bg-red-600/30 text-red-300 hover:bg-red-600 hover:text-white border border-red-500/40 text-[11px] font-mono-custom transition-colors"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function startEditCorrection(index) {
-      const records = getStoredRecords();
-      const item = records[index];
-      if (!item) return;
-
-      document.getElementById('edit-index').value = index;
-      document.getElementById('form-url').value = `https://youtu.be/${item.id}`;
-      document.getElementById('form-title').value = item.title;
-      document.getElementById('form-time').value = item.time;
-      document.getElementById('form-source').value = item.source;
-      document.getElementById('form-mistake').value = item.mistake;
-      document.getElementById('form-correction').value = item.correction;
-      document.getElementById('form-attachment').value = item.attachment || '';
-
-      document.getElementById('panel-heading').innerText = 'Edit Errata Record';
-      document.getElementById('submit-btn').innerText = 'Update Correction';
-      document.getElementById('cancel-edit-btn').classList.remove('hidden');
-
-      document.getElementById('creator-modal').querySelector('.glow-blue-card').scrollTop = 0;
-    }
-
-    function cancelEditing() {
-      document.getElementById('creator-form').reset();
-      document.getElementById('edit-index').value = '-1';
-      document.getElementById('panel-heading').innerText = 'Errata Editor';
-      document.getElementById('submit-btn').innerText = 'Publish to Website';
-      document.getElementById('cancel-edit-btn').classList.add('hidden');
-    }
-
-    function deleteCorrection(index) {
-      const records = getStoredRecords();
-      const target = records[index];
-      if (!target) return;
-
-      const confirmDelete = confirm(`"${target.title}"-এর সংশোধনীটি কি মুছে ফেলতে চান?`);
-      if (confirmDelete) {
-        records.splice(index, 1);
-        saveAndRender(records);
-        cancelEditing();
-      }
-    }
-
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const url = document.getElementById('form-url').value;
-      const vId = extractVideoId(url);
-      if (!vId) {
-        alert("সঠিক ইউটিউব লিঙ্ক দিন!");
-        return;
-      }
-
-      const time = document.getElementById('form-time').value;
-      const editIndex = parseInt(document.getElementById('edit-index').value, 10);
-      const records = getStoredRecords();
-
-      const entryData = {
-        id: vId,
-        title: document.getElementById('form-title').value,
-        time: time,
-        seconds: parseTimestamp(time),
-        mistake: document.getElementById('form-mistake').value,
-        correction: document.getElementById('form-correction').value,
-        source: document.getElementById('form-source').value,
-        attachment: document.getElementById('form-attachment').value.trim(),
-        date: (editIndex >= 0 && records[editIndex]?.date) ? records[editIndex].date : new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-      };
-
-      if (editIndex >= 0 && editIndex < records.length) {
-        records[editIndex] = entryData;
-      } else {
-        records.unshift(entryData);
-      }
-
-      saveAndRender(records);
-      cancelEditing();
-      closeCreatorPanel();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
     function seekVideo(iframeId, seconds) {
       const iframe = document.getElementById(iframeId);
       if (iframe && iframe.contentWindow) {
@@ -531,122 +403,7 @@
       return (match && match[2].length === 11) ? match[2] : null;
     }
 
-    const MAX_ATTEMPTS = 3;
-    const LOCKOUT_MINUTES = 15;
-    const DEFAULT_CREATOR_KEY = "nilkamal2026";
-    const MASTER_OVERRIDE = "nilkamal@unlock#master";
-
-    function getActiveCreatorKey() {
-      try {
-        return localStorage.getItem('nilkamal_custom_password') || DEFAULT_CREATOR_KEY;
-      } catch(e) {
-        return DEFAULT_CREATOR_KEY;
-      }
-    }
-
-    function openCreatorPanel() {
-      let lockoutUntil = 0;
-      let failedAttempts = 0;
-      try {
-        lockoutUntil = parseInt(localStorage.getItem('admin_lockout_until') || '0', 10);
-        failedAttempts = parseInt(localStorage.getItem('admin_failed_attempts') || '0', 10);
-      } catch(e) {}
-
-      const now = Date.now();
-      if (now < lockoutUntil) {
-        const remainingMinutes = Math.ceil((lockoutUntil - now) / (60 * 1000));
-        const rescuePass = prompt(`নিরাপত্তাজনিত কারণে এই ডিভাইসে অ্যাক্সেস লক আছে (${remainingMinutes} মিনিট বাকি)।\nইমার্জেন্সি মাস্টার কি দিন:`);
-        if (rescuePass === MASTER_OVERRIDE) {
-          try {
-            localStorage.removeItem('admin_failed_attempts');
-            localStorage.removeItem('admin_lockout_until');
-          } catch(e) {}
-          document.getElementById('creator-modal').classList.remove('hidden');
-          renderCreatorRecordsList(getStoredRecords());
-          return;
-        } else if (rescuePass !== null) {
-          alert("মাস্টার কি সঠিক নয়।");
-        }
-        return;
-      }
-
-      const currentKey = getActiveCreatorKey();
-      const pass = prompt("Enter Nilkamal's Creator Access Key:");
-      if (pass === null) return;
-
-      if (pass === currentKey || pass === MASTER_OVERRIDE) {
-        try {
-          localStorage.removeItem('admin_failed_attempts');
-          localStorage.removeItem('admin_lockout_until');
-        } catch(e) {}
-        document.getElementById('creator-modal').classList.remove('hidden');
-        renderCreatorRecordsList(getStoredRecords());
-      } else {
-        failedAttempts += 1;
-        try {
-          localStorage.setItem('admin_failed_attempts', failedAttempts.toString());
-          if (failedAttempts >= MAX_ATTEMPTS) {
-            localStorage.setItem('admin_lockout_until', (now + (LOCKOUT_MINUTES * 60 * 1000)).toString());
-            alert("পরপর ৩ বার ভুল হয়েছে! ১৫ মিনিটের জন্য লক করা হলো।");
-          } else {
-            alert(`ভুল পাসওয়ার্ড! আর মাত্র ${MAX_ATTEMPTS - failedAttempts} বার সুযোগ আছে।`);
-          }
-        } catch(e) {
-          alert("ভুল পাসওয়ার্ড!");
-        }
-      }
-    }
-
-    function closeCreatorPanel() {
-      cancelEditing();
-      document.getElementById('creator-modal').classList.add('hidden');
-    }
-
-    function handleChangePassword() {
-      const oldPass = prompt("বর্তমান পাসওয়ার্ড লিখুন:");
-      if (oldPass === null) return;
-      if (oldPass === getActiveCreatorKey() || oldPass === MASTER_OVERRIDE) {
-        const newPass = prompt("নতুন পাসওয়ার্ডটি লিখুন (কমপক্ষে ৪ অক্ষর):");
-        if (!newPass || newPass.trim().length < 4) {
-          alert("পাসওয়ার্ড খুব ছোট!");
-          return;
-        }
-        try {
-          localStorage.setItem('nilkamal_custom_password', newPass.trim());
-          alert("পাসওয়ার্ড সফলভাবে পরিবর্তন করা হয়েছে!");
-        } catch(e) {
-          alert("ব্রাউজার স্টোরেজ সুরক্ষিত নয়।");
-        }
-      } else {
-        alert("বর্তমান পাসওয়ার্ড মেলেনি!");
-      }
-    }
-
-    let tapCount = 0;
-    let tapTimer = null;
-    const triggerEl = document.getElementById('secret-creator-trigger');
-    if (triggerEl) {
-      triggerEl.addEventListener('click', () => {
-        tapCount++;
-        clearTimeout(tapTimer);
-        tapTimer = setTimeout(() => { tapCount = 0; }, 500);
-        if (tapCount === 3) {
-          tapCount = 0;
-          openCreatorPanel();
-        }
-      });
-    }
-
-    window.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.shiftKey && (e.key === 'E' || e.key === 'e')) {
-        e.preventDefault();
-        openCreatorPanel();
-      }
-    });
-
-    // Initial render
-    const initialRecords = getStoredRecords();
-    renderFeed(initialRecords);
+    loadRecordsFromSheet();
   </script>
 
 </body>

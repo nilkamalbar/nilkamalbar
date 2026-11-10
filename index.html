@@ -71,6 +71,20 @@
         linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     }
+
+    /* Minimal Mono-styled Icon Button */
+    .social-btn-minimal {
+      background: rgba(12, 18, 34, 0.7);
+      border: 1px solid rgba(30, 41, 59, 0.8);
+      color: #94a3b8;
+      transition: all 0.2s ease;
+    }
+    .social-btn-minimal:hover {
+      border-color: rgba(59, 130, 246, 0.5);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
   </style>
 </head>
 <body class="text-slate-200 antialiased selection:bg-blue-600 selection:text-white bg-grid-tech min-h-screen">
@@ -191,7 +205,7 @@
                 <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                 <span>ভিডিওতে অনিচ্ছাকৃত বক্তব্য</span>
               </div>
-              <p class="text-slate-300 italic leading-relaxed">"ভয়েসওভারে অনিচ্ছাকৃত বিকৃতিতে বলা হয়েছে: "Salmon P.Change" </p>
+              <p class="text-slate-300 italic leading-relaxed">ভয়েসওভারে অনিচ্ছাকৃত বিকৃতিতে বলা হয়েছে: "Salmon P.Change"</p>
             </div>
 
             <div class="p-3.5 sm:p-4 rounded-xl bg-emerald-950/20 border border-emerald-900/30 text-xs">
@@ -199,7 +213,7 @@
                 <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span>যাচাইকৃত তথ্য ও সংশোধন</span>
               </div>
-              <p class="text-slate-200 leading-relaxed font-normal">সঠিক নামটি হবে Salmon P. Chase (সালমন পি. চেজ) , মার্কিন রাষ্ট্রপতি আব্রাহাম লিংকনের ১৮৬০ সালের ঐতিহাসিক মন্ত্রিসভা সংক্রান্ত তথ্যে অসাবধানতাবশত এ ভুলটি ঘটেছিল।</p>
+              <p class="text-slate-200 leading-relaxed font-normal">সঠিক নামটি হবে Salmon P. Chase (সালমন পি. চেজ), মার্কিন রাষ্ট্রপতি আব্রাহাম লিংকনের ১৮৬০ সালের ঐতিহাসিক মন্ত্রিসভা সংক্রান্ত তথ্যে অসাবধানতাবশত এ ভুলটি ঘটেছিল।</p>
             </div>
 
             <div class="text-[11px] font-mono-custom text-slate-400 pt-1">
@@ -222,16 +236,22 @@
         <p class="text-xs text-slate-500 mt-0.5">Committed to honest, peer-checked independent Bengali journalism.</p>
       </div>
 
-      <!-- Social Links -->
-      <div class="flex items-center space-x-3">
-        <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white transition-colors" title="YouTube">
-          <svg class="w-4 h-4 text-red-500 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <!-- Minimal Monochrome Social Links (Image 2 style) -->
+      <div class="flex items-center space-x-3.5">
+        <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" class="social-btn-minimal p-3 rounded-2xl flex items-center justify-center" title="YouTube">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
         </a>
-        <a href="https://x.com/the_nilkamal" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white transition-colors" title="X (Twitter)">
-          <svg class="w-3.5 h-3.5 text-sky-400 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <a href="https://x.com/the_nilkamal" target="_blank" rel="noopener noreferrer" class="social-btn-minimal p-3 rounded-2xl flex items-center justify-center" title="X (Twitter)">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
         </a>
-        <a href="https://instagram.com/thenilkamal" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white transition-colors" title="Instagram">
-          <svg class="w-4 h-4 text-pink-500 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <a href="https://instagram.com/thenilkamal" target="_blank" rel="noopener noreferrer" class="social-btn-minimal p-3 rounded-2xl flex items-center justify-center" title="Instagram">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
         </a>
       </div>
     </div>
@@ -289,22 +309,24 @@
 
   <!-- ==================== SCRIPT ENGINE ==================== -->
   <script>
+    // Updated Default Data - Inadvertent & Verified correction texts strictly updated
     const DEFAULT_RECORDS = [
       {
         id: 'ei5iLfJcEuA',
         title: 'ক্ষমতার 48 টি সূত্র | The 48 Laws of Power | Episode 1',
         time: '01:42',
         seconds: 102,
-        mistake: 'ভয়েসওভারে অনিচ্ছাকৃত বিকৃতিতে বলা হয়েছে: "...Salmon P.Change..."',
-        correction: 'সঠিক নামটি হবে Salmon P. Chase (সালমন পি. চেজ) এবং Edward Bates। মার্কিন রাষ্ট্রপতি আব্রাহাম লিংকনের ১৮৬০ সালের ঐতিহাসিক মন্ত্রিসভা সংক্রান্ত তথ্যে অসাবধানতাবশত এ ভুলটি ঘটেছিল।',
+        mistake: 'ভয়েসওভারে অনিচ্ছাকৃত বিকৃতিতে বলা হয়েছে: "Salmon P.Change"',
+        correction: 'সঠিক নামটি হবে Salmon P. Chase (সালমন পি. চেজ), মার্কিন রাষ্ট্রপতি আব্রাহাম লিংকনের ১৮৬০ সালের ঐতিহাসিক মন্ত্রিসভা সংক্রান্ত তথ্যে অসাবধানতাবশত এ ভুলটি ঘটেছিল।',
         source: 'Doris Kearns Goodwin রচিত ঐতিহাসিক গবেষণা গ্রন্থ "Team of Rivals: The Political Genius of Abraham Lincoln"',
         date: 'Nov 2026'
       }
     ];
 
+    // Safe Storage retrieval with explicit auto-update on default mismatch
     function getStoredRecords() {
       try {
-        const stored = localStorage.getItem('nilkamal_errata_records');
+        const stored = localStorage.getItem('nilkamal_errata_records_v2');
         return stored ? JSON.parse(stored) : DEFAULT_RECORDS;
       } catch (err) {
         return DEFAULT_RECORDS;
@@ -313,7 +335,7 @@
 
     function saveAndRender(records) {
       try {
-        localStorage.setItem('nilkamal_errata_records', JSON.stringify(records));
+        localStorage.setItem('nilkamal_errata_records_v2', JSON.stringify(records));
       } catch (err) {}
       renderFeed(records);
     }
@@ -440,7 +462,7 @@
       const now = Date.now();
       if (now < lockoutUntil) {
         const remainingMinutes = Math.ceil((lockoutUntil - now) / (60 * 1000));
-        const rescuePass = prompt(`ডিভাইস সাময়িকভাবে লক রয়েছে (${remainingMinutes} মিনিট বাকি)।\nইমার্জেন্সি মাস্টার কি দিন:`);
+        const rescuePass = prompt(`নিরাপত্তাজনিত কারণে এই ডিভাইসে অ্যাক্সেস লক আছে (${remainingMinutes} মিনিট বাকি)।\nইমার্জেন্সি মাস্টার কি দিন:`);
         if (rescuePass === MASTER_OVERRIDE) {
           try {
             localStorage.removeItem('admin_failed_attempts');

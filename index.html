@@ -37,7 +37,6 @@
       backdrop-filter: blur(28px);
       -webkit-backdrop-filter: blur(28px);
       border: 1px solid rgba(96, 165, 250, 0.28);
-      /* 3D Ambient Layered Shadow */
       box-shadow: 
         0 20px 40px -15px rgba(0, 0, 0, 0.75),
         0 0 45px -8px rgba(37, 99, 235, 0.35),
@@ -173,10 +172,12 @@
         <p class="text-sm font-bold text-white tracking-wider uppercase inline-block">
           Nilkamal Bar
         </p>
-        <p class="text-[11px] font-mono-custom text-slate-400 mt-0.5"> Independent Bengali Documentary Filmmaker & Researcher.</p>
+        <p class="text-[11px] font-mono-custom text-slate-400 mt-1 uppercase tracking-wider">
+          Independent Bengali Documentary Filmmaker &amp; Researcher
+        </p>
       </div>
 
-      <!-- Social & Email Links -->correction: 'সঠিক নামটি হবে Salmon P. Chase (সালমন পি. চেজ), মার্কিন রাষ্ট্রপতি আব্রাহাম লিংকনের ১৮৬০ সালের ঐতিহাসিক মন্ত্রিসভা সংক্রান্ত তথ্যে অসাবধানতাবশত এ ভুলটি ঘটেছিল।',
+      <!-- Social & Email Links -->
       <div class="flex items-center space-x-3.5">
         <a href="https://youtube.com/@thenilkamal" target="_blank" rel="noopener noreferrer" class="social-btn-minimal p-3 rounded-2xl flex items-center justify-center" title="YouTube">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -314,7 +315,7 @@
       }
 
       container.innerHTML = records.map((item, index) => {
-        // ১. মাল্টিপল লিংক হ্যান্ডেলিং (Space, Enter বা Comma)
+        // ১. একাধিক লিংক আলাদা করা (Space, New Line বা Comma)
         const rawLinks = (item.attachment || '')
           .split(/[\s,]+/)
           .map(link => link.trim())
@@ -339,7 +340,7 @@
           `;
         }).join('');
 
-        // ২. মাল্টিপল টাইমস্ট্যাম্প বাটন হ্যান্ডেলিং (Space, Enter বা Comma)
+        // ২. একাধিক টাইমস্ট্যাম্প বাটন তৈরি (Space, New Line বা Comma)
         const timeEntries = (item.time || '00:00')
           .split(/[\s,]+/)
           .map(t => t.trim())

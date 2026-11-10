@@ -291,8 +291,33 @@
       }
 
       container.innerHTML = records.map((item, index) => {
-        const hasAttachment = Boolean(item.attachment && item.attachment.trim() !== '');
-        const isPdf = hasAttachment && item.attachment.toLowerCase().endsWith('.pdf');
+        // Space, Enter (New line) বা Comma দিয়ে একাধিক লিংক আলাদা করা
+        const rawLinks = (item.attachment || '')
+          .split(/[\s,]+/)
+          .map(link => link.trim())
+          .filter(link => link.startsWith('http://') || link.startsWith('https://'));
+
+        const attachmentButtons = rawLinks.map((link, i) => {
+          const isPdf = link.toLowerCase().endsWith('.pdf');
+          let label = 'Attachment';
+          if (isPdf) {
+            label = rawLinks.length > 1 ? `PDF ${i + 1}` : 'Open PDF';
+          } else {
+            label = rawLinks.length > 1 ? `Attachment ${i + 1}` : 'View Attachment';
+          }
+
+          return `
+            <a 
+              href="${link}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-900/30 border border-blue-500/30 text-xs font-mono-custom text-blue-300 hover:text-white hover:bg-blue-800/40 transition-colors"
+            >
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+              <span>${label} ↗</span>
+            </a>
+          `;
+        }).join('');
         
         return `
         <article class="glow-blue-card rounded-2xl p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-6">
@@ -330,24 +355,14 @@
                   <span>Jump to ${item.time}</span>
                 </button>
                 
-                <div class="flex items-center gap-3">
-                  ${hasAttachment ? `
-                    <a 
-                      href="${item.attachment}" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-900/30 border border-blue-500/30 text-xs font-mono-custom text-blue-300 hover:text-white hover:bg-blue-800/40 transition-colors"
-                    >
-                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
-                      <span>${isPdf ? 'Open PDF' : 'View Attachment'} ↗</span>
-                    </a>
-                  ` : ''}
+                <div class="flex items-center gap-2 flex-wrap">
+                  ${attachmentButtons}
                   
                   <a 
                     href="https://youtu.be/${item.id}?t=${item.seconds}" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    class="text-xs font-mono-custom text-blue-400 hover:text-blue-300 underline"
+                    class="text-xs font-mono-custom text-blue-400 hover:text-blue-300 underline ml-1"
                   >
                     Watch on YouTube ↗
                   </a>
